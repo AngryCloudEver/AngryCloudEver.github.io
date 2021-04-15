@@ -1,0 +1,324 @@
+body, *{
+    margin: 0;
+}
+
+/* Saat Pertama Web Dibuka */
+#firstBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #C52E27;
+}
+
+#firstBackground2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: -10;
+}
+
+#firstBackground2Images{
+    width: 100%;
+    height: auto;
+}
+
+#firstText{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 143px/2);
+
+    font-family: 'Rationale';
+    font-size: 124px;
+    text-align: center;
+}
+
+#firstText1{
+    opacity: 0;
+    color: #FFFDFC;
+}
+
+#firstText2{
+    opacity: 0;
+    color: #1FD5BB;
+}
+
+/*Utama*/
+#container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    position: absolute;
+    width: 65%;
+    height: 0%;
+
+    top: 0;
+    left: 0;
+
+    background-color: #49C1B1;
+}
+
+aside{
+    position: fixed;
+    width: 35%;
+    height: 0%;
+
+    bottom: 0;
+    right: 0;
+
+    background-color: #FFEEE4;
+    
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.hide{
+    opacity: 0;
+}
+
+/*Sidebar*/
+#containerSidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100%;
+}
+
+#containerImageSidebar{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+
+    top: 30%;
+    left: 7vw;
+
+    cursor: pointer;
+}
+
+#imageSidebar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border: 5px solid #1FD5BB;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#imageSidebar #myPhoto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#imageSidebar #dropDown{
+    position: relative;
+    width: 107%;
+    height: auto;
+    left: -3%;
+    top: 50%;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#imageSidebar #dropDownList{
+    position: absolute;
+    top: 107.5%;
+    left: 20%;
+
+    list-style: none;
+    color: #5BBBAC;
+    font-family: "Rationale";
+    font-size: 3.3vw;
+    text-align: center;
+
+    padding: 0;
+    opacity: 0;
+}
+
+#imageSidebar #dropDownList a{
+    text-decoration: none;
+    color: #5BBBAC;
+}
+
+/*Main Area*/
+#section1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#section2, #section3, #section4, #section5{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/*Section 1*/
+
+#bgPhoto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+#blackMask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url();
+}
+
+#containerTitle{
+    position: absolute;
+    left: 5vw;
+    top: 18vw;
+}
+
+.title{
+    color: #FFEEE4;
+
+    font-family: Rationale;
+    font-size: 4vw;
+}
+
+#subTitle{
+    margin-top: .5vw;
+}
+
+.subTitle{
+    color: #FFEEE4;
+    
+    font-family: Rationale;
+    font-size: 2.5vw;
+}
+
+/*Section 2*/
+
+#section2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #FFEEE4;
+}
+
+.containerSection{
+    position: relative;
+    padding: 3vw 5vw;
+}
+
+/*Section 3*/
+
+#section3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #5BBBAC;
+}
+
+.containerSection{
+    position: relative;
+    padding: 3vw 5vw;
+}
+
+#section3 ul{
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 1vw !important;
+}
+
+#section3 ul li{
+    list-style-image: url("../images/list.png");
+}
+
+/*Section 4*/
+#section4{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #FFEEE4;
+}
+
+.containerSection{
+    position: relative;
+    padding: 3vw 5vw;
+}
+
+/*Section 5*/
+#section5{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+}
+
+.containerSection{
+    position: relative;
+    padding: 3vw 5vw;
+}
+
+/*Text Class*/
+.text-white{
+    color: #FFEEE4;
+}
+
+.text-black{
+    color: #000000;
+}
+
+.withUnderline{
+    text-decoration: underline;
+}
+
+.header{
+    display: inline-block;
+
+    font-family: Rationale;
+    font-size: 3.5vw;
+}
+
+.subHeader{
+    display: inline-block;
+
+    font-family: Rationale;
+    font-size: 3vw;
+}
+
+.subHeader2{
+    display: inline-block;
+
+    font-family: Rationale;
+    font-size: 2vw;
+}
+
+.contentText{
+    width: 80%;
+
+    font-family: Rationale;
+    font-size: 2vw;
+
+    margin-bottom: 2vh;
+}
+
+.pseudoImage{
+    position: relative;
+    top: -1vh;
+}

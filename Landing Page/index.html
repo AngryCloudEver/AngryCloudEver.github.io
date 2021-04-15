@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+    <script src="assets/js/first.js"></script>
+</head>
+<body>
+    <div id="firstBackground">
+        <div id="firstText">
+            <span id="firstText1">WELCOME</span>
+            <span id="firstText2">TO MY WEB</span>
+        </div>
+    </div>
+    <div id="firstBackground2">
+        <img src="assets/images/myPhoto_1.jpg" id="firstBackground2Images">
+    </div>
+
+    <div id="container">
+        <main>
+            <div id="section1" class="hide">
+                <img src="assets/images/bg-1.jpg" id="bgPhoto">
+                <div id="blackMask">
+                    <div id="containerTitle">
+                        <span class="title">
+                            Aplikasi Restoran
+                        </span>
+                        <br>
+                        <span class="title">
+                            Mudah & Murah
+                        </span>
+                        <div id="subTitle">
+                            <span class="subTitle">
+                                Atur SEMUA Urusan Restoran
+                            </span>
+                            <br>
+                            <span class="subTitle">
+                                Dalam Satu Aplikasi!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section2" class="hide">
+                <div class="containerSection">
+                    <p class="header text-black">
+                        Tentang Aplikasi
+                    </p>
+                    <p class="contentText text-black">
+                        Aplikasi untuk mengatur restoran Anda dengan mudah dan praktis.
+                    </p>
+                    <p class="contentText text-black">
+                        Aplikasi didesain dengan sederhana sehingga memudahkan anda dalam menggunakannya.
+                    </p>
+                    <p class="contentText text-black">
+                        Buat Restoran Anda Lebih Efektif Dengan Aplikasi Kami!
+                    </p>
+                </div>
+            </div>
+            <div id="section3" class="hide">
+                <div class="containerSection">
+                    <p class="header text-white">
+                        Fitur Aplikasi
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="contentText text-white">Aplikasi Kasir</span>
+                        </li>
+                        <li>
+                            <span class="contentText text-white">Mendata Makanan, Ketersediaan Makanan, dan Pelanggan yang Masuk</span>
+                        </li>
+                        <li>
+                            <span class="contentText text-white">Laporan yang dapat Dicetak</span>
+                        </li>
+                        <li>
+                            <span class="contentText text-white">Pengaturan Tempat Duduk</span>
+                        </li>
+                        <li>
+                            <span class="contentText text-white">Dan Masih Banyak Lagi...</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="section4" class="hide">
+                <div class="containerSection">
+                    <p class="header text-black">
+                        HARGA MURAH!
+                    </p>
+                    <br>
+                    <br>
+                    <p class="subHeader text-black withUnderline" style="margin-bottom: 3vh">
+                        Rp500.000,00
+                    </p>
+                    <p class="contentText text-black">
+                        Dengan hanya Rp500.000,00, Anda bisa mendapatkan aplikasi restoran ini beserta dengan semua fitur-fitur yang ada di dalamnya!
+                    </p>
+                    <br>
+                    <p class="contentText text-black">
+                        Tunggu apa lagi? Cepat PESAN SEKARANG!
+                    </p>
+                </div>
+            </div>
+            <div id="section5" class="hide">
+                <div class="containerSection">
+                    <p class="header text-white">
+                        Pesan Sekarang:
+                    </p>
+                    <br>
+                    <br>
+                    <p class="subHeader2 text-white">
+                        <span class="iconify" data-inline="false" data-icon="ant-design:instagram-filled" style="color: #ffffff; font-size: 2vw;"></span>
+                        <span class="pseudoImage">@rogerjulianto</span>
+                    </p>
+                    <br>
+                    <p class="subHeader2 text-white">
+                        <span class="iconify" data-inline="false" data-icon="ant-design:twitter-circle-filled" style="color: #ffffff; font-size: 31px;"></span>
+                        <span class="pseudoImage">@RogerJGA</span>
+                    </p>
+                    <br>
+                    <p class="subHeader2 text-white">
+                        <span class="iconify" data-inline="false" data-icon="entypo:email" style="color: #ffffff; font-size: 32px;"></span>
+                        <span class="pseudoImage">rogerangryawan111@gmail.com</span>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div id="containerSidebar">
+                <div id="containerImageSidebar">
+                    <div id="imageSidebar" class="hide">
+                        <img src="assets/images/myPhoto_1-Small.jpg" alt="Foto Profile" id="myPhoto">
+                        <img src="assets/images/Drop-Down Profile 2.png" alt="Drop-Down" id="dropDown">
+                        <ul id="dropDownList">
+                            <div class="list"onclick="goToCertainSection('section1')">    
+                                <li id="dropDownList1">
+                                    HOME
+                                </li>
+                            </div>
+                            <div class="list" onclick="goToCertainSection('section2')">
+                                <li id="dropDownList2">
+                                    TENTANG
+                                </li>
+                            </div>
+                            <div class="list" onclick="goToCertainSection('section3')">
+                                <li id="dropDownList3">
+                                    FITUR
+                                </li>
+                            </div>
+                            <div class="list" onclick="goToCertainSection('section4')">
+                                <li id="dropDownList4">
+                                    HARGA
+                                </li>
+                            </div>
+                            <div class="list" onclick="goToCertainSection('section5')">
+                                <li class="dropDownList">
+                                    PESAN
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
