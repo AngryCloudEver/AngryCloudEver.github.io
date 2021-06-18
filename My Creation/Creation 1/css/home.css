@@ -397,6 +397,22 @@ body{
 
         margin-top: .4em;
     }
+
+    #productRightContainer h1{
+        font-size: 2.75em;
+    }
+
+    #productRightContainer p{
+        font-size: 1.5em;
+    }
+
+    #pricing h1{
+        font-size: 2.75em;
+    }
+
+    .pricingTraitText{
+        font-size: 1.25em;
+    }
 }
 
 @media screen and (min-width: 1880px){
@@ -426,6 +442,40 @@ body{
 
         margin-top: .4em;
     }
+
+    #productRightContainer h1{
+        font-size: 3.25em;
+    }
+
+    #productRightContainer p{
+        font-size: 1.75em;
+    }
+
+    #pricing h1{
+        font-size: 3.25em;
+        margin-bottom: .95em;
+    }
+
+    .pricingHeader h2{
+        font-size: 3em;
+    }
+
+    .pricingPriceTag .price{
+        font-size: 7em;
+    }
+
+    .pricingPriceTag .subprice{
+        font-size: 2.75em;
+        margin-bottom: .75em;
+    }
+
+    .pricingButton{
+        font-size: 3.25em;
+    }
+
+    .pricingTraitText{
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (min-width: 2160px){
@@ -447,6 +497,41 @@ body{
 
         margin-top: .4em;
     }
+
+    #productRightContainer h1{
+        font-size: 3.75em;
+    }
+
+    #productRightContainer p{
+        font-size: 2.25em;
+    }
+
+    #pricing h1{
+        font-size: 3.75em;
+        margin-top: .25em;
+    }
+
+    .pricingHeader h2{
+        font-size: 3.5em;
+    }
+
+    .pricingPriceTag .price{
+        font-size: 8.5em;
+    }
+
+    .pricingPriceTag .subprice{
+        font-size: 3.5em;
+        margin-bottom: .5em;
+    }
+
+    .pricingButton{
+        font-size: 3.5em;
+    }
+
+    .pricingTraitText{
+        font-size: 2em;
+        padding: .25em 0 .25em .25em;
+    }
 }
 
 @media screen and (min-width: 2340px){
@@ -467,6 +552,22 @@ body{
         padding: .1em .65em .2em .65em;
 
         margin-top: .4em;
+    }
+
+    #productRightContainer h1{
+        font-size: 4.25em;
+    }
+
+    #productRightContainer p{
+        font-size: 2.5em;
+    }
+
+    #pricing h1{
+        font-size: 4.25em;
+    }
+
+    .pricingHeader h2{
+        font-size: 4em;
     }
 }
 
@@ -773,6 +874,14 @@ body{
         font-size: 1.25em;
         margin-bottom: .3em;
     }
+
+    #pricing h1{
+        font-size: 2.25em;
+    }
+
+    .pricingHeader h2{
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 558px){
@@ -796,6 +905,29 @@ body{
     #productRightContainer p{
         font-size: 1em;
     }
+
+    .pricingPriceTag .price{
+        font-size: 6.5em;
+        margin-left: 18%;
+    }
+
+    .pricingPriceTag .subprice{
+        font-size: 2.5em;
+        margin-bottom: .5em;
+    }
+
+    .pricingButton{
+        font-size: 2.5em;
+    }
+
+    .pricingTraitText span{
+        font-size: 1.25em;
+    }
+
+    .pricingTraitText img{
+        min-width: 2.5em;
+        max-width: 2.5em;
+    }
 }
 
 @media screen and (max-width: 427px){
@@ -812,6 +944,54 @@ body{
     }
 
     #productRightContainer h1{
+        font-size: 1.75em;
+    }
+
+    #pricing{
+        padding: 2em 10% 2.25em 10%;
+    }
+
+    #pricing h1{
+        font-size: 1.75em;
+    }
+
+    .pricingHeader h2{
+        font-size: 1.75em;
+    }
+
+    .pricingPriceTag .price{
+        font-size: 5.5em;
+    }
+
+    .pricingPriceTag .subprice{
+        font-size: 2em;
+    }
+
+    .pricingButtonContainer{
+        padding: 1.5em 0;
+    }
+    
+    .pricingButton{
+        font-size: 2em;
+    }
+
+    .pricingTraitText span{
+        font-size: 1em;
+    }
+
+    .pricingTraitText img{
+        min-width: 2em;
+        max-width: 2em;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .pricingPriceTag .price{
+        font-size: 5em;
+        margin-left: 13%;
+    }
+
+    .pricingButton{
         font-size: 1.75em;
     }
 }
