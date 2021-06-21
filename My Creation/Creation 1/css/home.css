@@ -370,6 +370,174 @@ body{
     padding-left: .25em;
 }
 
+#whoIsUs{
+    width: 100%;
+    height: 32em;
+
+    background: linear-gradient(0deg, rgba(18, 86, 160, 0.8), rgba(18, 86, 160, 0.8)), url(../images/image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#whoIsUs #whoIsUsContainer{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+#whoIsUs #leftSection{
+    flex-basis: 10%;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#whoIsUs #leftSection .previous{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#whoIsUs #leftSection .previous img{
+    width: 100%;
+    transition: opacity 0.2s ease-in;
+}
+
+#whoIsUs #middleSection{
+    flex-basis: 80%;
+    position: relative;
+
+    overflow: hidden;
+}
+
+#whoIsUs #middleSection .content1, #whoIsUs #middleSection .content2{
+    text-align: center;
+    position: absolute;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 100%;
+    padding: 0 10%;
+
+    box-sizing: border-box;
+}
+
+#whoIsUs #middleSection .content1{
+    margin-top: -.5em;
+}
+
+#whoIsUs #middleSection .content2{
+    display: none;
+}
+
+#whoIsUs #middleSection h1{
+    line-height: 100%;
+    color: var(--white);
+    font-family: 'Manuale Medium';
+    font-size: 4em;
+    font-weight: inherit;
+}
+
+#whoIsUs #middleSection p{
+    color: var(--white);
+    font-family: 'Manuale Medium';
+    font-size: 1.5em;
+    font-weight: inherit;
+}
+
+#whoIsUs #rightSection{
+    flex-basis: 10%;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#whoIsUs #rightSection .next{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#whoIsUs #rightSection .next img{
+    width: 100%;
+    transition: opacity 0.2s ease-in;
+}
+
+#whoIsUs #leftSection .previous img:hover, #whoIsUs #rightSection .next img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+#whoIsUs #leftSection .previous img:active, #whoIsUs #rightSection .next img:active{
+    opacity: .5;
+}
+
+#benefits{
+    padding: 1.75em 10% 2em 10%;
+}
+
+#benefits #allBenefits{
+    display: flex;
+    flex-direction: column;
+}
+
+#benefits h1{
+    font-family: 'Manuale SemiBold';
+    color: var(--blue3);
+    font-weight: normal;
+    font-size: 2.5em;
+
+    margin-bottom: .75em;
+    text-align: center;
+
+    line-height: 100%;
+}
+
+.benefitsContainer{
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.benefitsIcon{
+    flex-basis: 12%;
+}
+
+.benefitsIcon img{
+    width: 65%;
+    float: right;
+}
+
+.benefitsText{
+    flex-basis: 88%;
+    padding-left: 1.5em;
+}
+
+.benefitsText h2{
+    font-size: 1.75em;
+    font-family: 'Manuale SemiBold';
+    font-weight: normal;
+    line-height: 100%;
+    margin-top: -.1em;
+    margin-bottom: .25em;
+    color: var(--blue3);
+}
+
+.benefitsText p{
+    font-size: 1.25em;
+    font-family: 'Manuale Medium';
+    color: var(--blue3);
+}
+
+
 @media screen and (min-width: 1628px){
     #menu ul li{
         font-size: 3em;
@@ -412,6 +580,26 @@ body{
 
     .pricingTraitText{
         font-size: 1.25em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 4.5em;
+    }
+
+    #whoIsUs #middleSection p{
+        font-size: 1.75em;
+    }
+
+    #benefits h1{
+        font-size: 2.75em;
+    }
+
+    .benefitsText h2{
+        font-size: 1.75em;
+    }
+
+    .benefitsText p{
+        font-size: 1.5em;
     }
 }
 
@@ -476,6 +664,31 @@ body{
     .pricingTraitText{
         font-size: 1.5em;
     }
+
+    #whoIsUs #middleSection h1{
+        font-size: 5em;
+    }
+
+    #whoIsUs #middleSection p{
+        font-size: 2.25em;
+    }
+
+    #benefits{
+        padding: 2.5em 10% 2em 10%;
+    }
+
+    #benefits h1{
+        font-size: 3.25em;
+        margin-bottom: 1em;
+    }
+
+    .benefitsText h2{
+        font-size: 2em;
+    }
+
+    .benefitsText p{
+        font-size: 1.75em;
+    }
 }
 
 @media screen and (min-width: 2160px){
@@ -532,6 +745,38 @@ body{
         font-size: 2em;
         padding: .25em 0 .25em .25em;
     }
+
+    #whoIsUs{
+        height: 36em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 6em;
+    }
+
+    #whoIsUs #middleSection p{
+        font-size: 2.75em;
+    }
+
+    #benefits h1{
+        font-size: 3.75em;
+    }
+
+    .benefitsText h2{
+        font-size: 2.5em;
+    }
+
+    .benefitsText p{
+        font-size: 2.25em;
+    }
+
+    .benefitsIcon{
+        flex-basis: 15%;
+    }
+
+    .benefitsText{
+        flex-basis: 85%;
+    }
 }
 
 @media screen and (min-width: 2340px){
@@ -569,6 +814,10 @@ body{
     .pricingHeader h2{
         font-size: 4em;
     }
+
+    #benefits h1{
+        font-size: 4.25em;
+    }
 }
 
 @media screen and (min-width: 2473px){
@@ -589,6 +838,14 @@ body{
         padding: .1em .65em .2em .65em;
 
         margin-top: .4em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 8em;
+    }
+
+    #whoIsUs #middleSection p{
+        font-size: 3.25em;
     }
 }
 
@@ -686,12 +943,15 @@ body{
 
     .pricingPriceTag .price{
         font-size: 5em;
-        margin-left: 10%;
+        margin-left: inherit;
+        text-align: center;
     }
 
     .pricingPriceTag .subprice{
         font-size: 2em;
         margin-bottom: .75em;
+        margin-right: inherit;
+        text-align: center;
     }
     
     .pricingButtonContainer{
@@ -700,6 +960,26 @@ body{
 
     .pricingButton{
         font-size: 1.75em;
+    }
+
+    #whoIsUs{
+        height: 28em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 3.5em;
+    }
+    
+    #whoIsUs #middleSection p{
+        font-size: 1.25em;
+    }
+
+    .benefitsIcon{
+        flex-basis: 20%;
+    }
+
+    .benefitsText{
+        flex-basis: 80%;
     }
 }
 
@@ -734,6 +1014,18 @@ body{
 
     .pricingButton{
         font-size: 1.5em;
+    }
+
+    #benefits h1{
+        font-size: 1.75em;
+    }
+
+    .benefitsText h2{
+        font-size: 1.25em;
+    }
+
+    .benefitsText p{
+        font-size: 1em;
     }
 }
 
@@ -818,6 +1110,7 @@ body{
     .pricingPriceTag .price{
         font-size: 7.5em;
         margin-left: 20%;
+        text-align: left;
     }
     
     .pricingPriceTag .subprice{
@@ -841,6 +1134,26 @@ body{
         font-size: 1.5em;
         line-height: 110%;
         padding-bottom: .1em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 4em;
+    }
+    
+    #whoIsUs #middleSection p{
+        font-size: 1.5em;
+    }
+
+    #benefits h1{
+        font-size: 2.75em;
+    }
+
+    .benefitsText h2{
+        font-size: 1.75em;
+    }
+
+    .benefitsText p{
+        font-size: 1.5em;
     }
 }
 
@@ -881,6 +1194,22 @@ body{
 
     .pricingHeader h2{
         font-size: 2em;
+    }
+
+    #whoIsUs #middleSection p{
+        font-size: 1.25em;
+    }
+
+    #benefits h1{
+        font-size: 2.25em;
+    }
+
+    .benefitsText h2{
+        font-size: 1.5em;
+    }
+
+    .benefitsText p{
+        font-size: 1.25em;
     }
 }
 
@@ -982,6 +1311,57 @@ body{
     .pricingTraitText img{
         min-width: 2em;
         max-width: 2em;
+    }
+
+    #whoIsUs{
+        height: 25em;
+    }
+
+    #whoIsUs #middleSection h1{
+        font-size: 2em;
+    }
+    
+    #whoIsUs #middleSection p{
+        font-size: 1em;
+    }
+
+    #benefits h1{
+        font-size: 1.75em;
+    }
+
+    .benefitsContainer{
+        flex-direction: column;
+    }
+
+    .benefitsIcon{
+        flex-basis: inherit;
+    }
+
+    .benefitsIcon img{
+        position: relative;
+        float: inherit;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30%;
+
+        margin-top: .25em;
+    }
+
+    .benefitsText{
+        flex-basis: inherit;
+        padding: inherit;
+        padding-top: .5em;
+    }
+
+    .benefitsText h2{
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .benefitsText p{
+        font-size: 1em;
+        text-align: center;
     }
 }
 
