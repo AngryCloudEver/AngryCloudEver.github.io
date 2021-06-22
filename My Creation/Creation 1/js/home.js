@@ -57,6 +57,29 @@ $(window).on('load', function(event){
         }
     });
 
+    $(".whyUsContent").on("mouseenter", function(){
+        let whyUsContentClass = $(this);
+        whyUsContentClass.animate({backgroundColor: "#1256A0"}, 200);
+        whyUsContentClass.children().animate({opacity:0}, 200, function(){
+            whyUsContentClass.children(".whyUsIcon").css('display', 'none');
+            whyUsContentClass.children(".whyUsText").css('display', 'none');
+            whyUsContentClass.children(".whyUsTextFlip").css('display', 'block');
+            whyUsContentClass.children(".whyUsTextFlip").animate({opacity: 1}, 100);
+        });
+    });
+
+    $(".whyUsContent").on("mouseleave", function(){
+        let whyUsContentClass = $(this);
+        whyUsContentClass.animate({backgroundColor: "#4B9FC8"}, 100);
+        whyUsContentClass.children().animate({opacity:0}, 200, function(){
+            whyUsContentClass.children(".whyUsIcon").css('display', 'block');
+            whyUsContentClass.children(".whyUsText").css('display', 'block');
+            whyUsContentClass.children(".whyUsTextFlip").css('display', 'none');
+            whyUsContentClass.children(".whyUsIcon").animate({opacity: 1}, 100);
+            whyUsContentClass.children(".whyUsText").animate({opacity: 1}, 100);
+        });
+    });
+
     function productImageResize(){
         let productImageWidth = $("#productLeftImage").children().css('width');
         $("#productLeftImage").children().css('height', productImageWidth);
