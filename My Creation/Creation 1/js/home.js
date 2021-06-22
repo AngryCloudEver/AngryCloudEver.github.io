@@ -59,12 +59,14 @@ $(window).on('load', function(event){
 
     $(".whyUsContent").on("mouseenter", function(){
         let whyUsContentClass = $(this);
+        let containerHeight = $(this).css('height');
         whyUsContentClass.animate({backgroundColor: "#1256A0"}, 200);
         whyUsContentClass.children().animate({opacity:0}, 200, function(){
             whyUsContentClass.children(".whyUsIcon").css('display', 'none');
             whyUsContentClass.children(".whyUsText").css('display', 'none');
             whyUsContentClass.children(".whyUsTextFlip").css('display', 'block');
             whyUsContentClass.children(".whyUsTextFlip").animate({opacity: 1}, 100);
+            whyUsContentClass.css('height', containerHeight);
         });
     });
 
@@ -77,6 +79,7 @@ $(window).on('load', function(event){
             whyUsContentClass.children(".whyUsTextFlip").css('display', 'none');
             whyUsContentClass.children(".whyUsIcon").animate({opacity: 1}, 100);
             whyUsContentClass.children(".whyUsText").animate({opacity: 1}, 100);
+            whyUsContentClass.css('height', "auto");
         });
     });
 

@@ -567,7 +567,7 @@ body{
 
     margin: auto;
     margin-bottom: 2em;
-    height: 19.75em;
+    height: auto;
 
     padding: 1.5em 0;
 
@@ -604,9 +604,8 @@ body{
 
 .whyUsContent .whyUsIcon img{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    transform: translateY(20%);
+    -ms-transform: translateY(20%);
 
     display: block;
     width: 75%;
@@ -716,10 +715,6 @@ body{
         font-size: 2.75em;
     }
     
-    #whyUs .whyUsContent{
-        height: 22em;
-    }
-    
     .whyUsContent .whyUsText h2{
         font-size: 2.25em;
     }
@@ -818,10 +813,6 @@ body{
 
     #whyUs #whyUsTitle h1{
         font-size: 3.25em;
-    }
-    
-    #whyUs .whyUsContent{
-        height: 26em;
     }
     
     .whyUsContent .whyUsText h2{
@@ -924,10 +915,6 @@ body{
         font-size: 3.25em;
     }
     
-    #whyUs .whyUsContent{
-        height: 28em;
-    }
-    
     .whyUsContent .whyUsText h2{
         font-size: 2.75em;
     }
@@ -980,11 +967,7 @@ body{
     #whyUs #whyUsTitle h1{
         font-size: 4.25em;
     }
-    
-    #whyUs .whyUsContent{
-        height: 31em;
-    }
-    
+
     .whyUsContent .whyUsText h2{
         font-size: 3.25em;
     }
@@ -1085,7 +1068,6 @@ body{
     
     #whyUs .whyUsContent{
         flex-basis: 22.5%;
-        height: 19em;
     }
 }
 
@@ -1213,16 +1195,7 @@ body{
     }
 
     #whyUs .whyUsContent{
-        height: 21em;
         flex-basis: 45%;
-    }
-
-    #whyUs .whyUsContent:nth-child(4n+1){
-        margin: inherit;
-    }
-
-    #whyUs .whyUsContent:nth-child(4n+3){
-        margin: inherit;
     }
 
     #whyUs .whyUsContent:nth-child(2n+1){
@@ -1374,7 +1347,6 @@ body{
     }
 
     #whyUs .whyUsContent{
-        height: 22.5em;
         flex-basis: 48%;
     }
 
@@ -1440,7 +1412,6 @@ body{
     }
 
     #whyUs .whyUsContent{
-        height: 20.5em;
         flex-basis: 48%;
     }
 
@@ -1497,10 +1468,6 @@ body{
     .pricingTraitText img{
         min-width: 2.5em;
         max-width: 2.5em;
-    }
-
-    #whyUs .whyUsContent{
-        height: 16.5em;
     }
 
     .whyUsContent .whyUsText h2{
@@ -1623,7 +1590,6 @@ body{
     }
 
     #whyUs .whyUsContent{
-        height: 26em;
         flex-basis: inherit;
 
         margin-bottom: 2em !important;
