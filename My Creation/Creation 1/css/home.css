@@ -647,6 +647,74 @@ body{
     -ms-transform: translateY(-50%);
 }
 
+#testimony{
+    background-color: var(--blue);
+    padding: 2em 10%;
+}
+
+#testimony h1{
+    font-family: 'Manuale SemiBold';
+    color: var(--blue3);
+    font-weight: normal;
+    font-size: 2.5em;
+
+    margin-bottom: 1em;
+    text-align: center;
+
+    line-height: 100%;
+}
+
+#testimony #testimonyContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#testimony #testimonyContainer .testimonyContent{
+    flex-basis: 31%;
+    background-color: var(--white);
+    margin: auto;
+
+    transition: all 0.2s ease-in;
+}
+
+#testimony #testimonyContainer .testimonyContent:hover{
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+}
+
+#testimony #testimonyContainer .testimonyContent:nth-child(3n+1){
+    margin-left: 0;
+}
+
+#testimony #testimonyContainer .testimonyContent:nth-child(3n+3){
+    margin-right: 0;
+}
+
+.testimonyContent .testimonyImage{
+    height: 14em;
+
+    background-image: url(../images/image3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonyContent .testimonyText{
+    padding: .75em 1.5em 1em 1.5em;
+}
+
+.testimonyText p{
+    font-family: 'Manuale SemiBold';
+    color: var(--blue3);
+    font-size: 1.25em;
+
+    margin-bottom: .25em;
+}
+
+.testimonyText small{
+    font-family: 'Manuale SemiBold';
+    color: var(--orange);
+    font-size: 1em;
+}
+
 @media screen and (min-width: 1628px){
     #menu ul li{
         font-size: 3em;
@@ -721,6 +789,18 @@ body{
     
     .whyUsContent .whyUsTextFlip p{
         font-size: 1.75em;
+    }
+
+    #testimony h1{
+        font-size: 2.75em;
+    }
+    
+    .testimonyText p{
+        font-size: 1.5em;
+    }
+    
+    .testimonyText small{
+        font-size: 1.25em;
     }
 }
 
@@ -822,6 +902,23 @@ body{
     .whyUsContent .whyUsTextFlip p{
         font-size: 2em;
     }
+
+    #testimony h1{
+        font-size: 3.25em;
+        margin-bottom: .75em;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 19em;
+    }
+    
+    .testimonyText p{
+        font-size: 1.75em;
+    }
+    
+    .testimonyText small{
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (min-width: 2160px){
@@ -912,7 +1009,7 @@ body{
     }
 
     #whyUs #whyUsTitle h1{
-        font-size: 3.25em;
+        font-size: 3.75em;
     }
     
     .whyUsContent .whyUsText h2{
@@ -921,6 +1018,24 @@ body{
     
     .whyUsContent .whyUsTextFlip p{
         font-size: 2.25em;
+    }
+
+    #testimony h1{
+        font-size: 3.75em;
+        margin-bottom: .75em;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 20em;
+    }
+    
+    .testimonyText p{
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+    
+    .testimonyText small{
+        font-size: 1.75em;
     }
 }
 
@@ -974,6 +1089,28 @@ body{
     
     .whyUsContent .whyUsTextFlip p{
         font-size: 2.5em;
+    }
+
+    #testimony h1{
+        font-size: 4.25em;
+        margin-bottom: .75em;
+    }
+
+    .testimonyContent .testimonyText{
+        padding: 1.25em 2em 1.5em 2em
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 26em;
+    }
+    
+    .testimonyText p{
+        font-size: 2.25em;
+        margin-bottom: 0;
+    }
+    
+    .testimonyText small{
+        font-size: 2em;
     }
 }
 
@@ -1217,6 +1354,27 @@ body{
     .whyUsContent .whyUsTextFlip p{
         font-size: 1.75em;
     }
+
+    #testimony h1{
+        font-size: 1.75em;
+        margin-bottom: 1em;
+    }
+    
+    .testimonyText p{
+        font-size: 1em;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 12em;
+    }
+
+    .testimonyContent .testimonyText{
+        padding: .5em 1.25em .75em 1.25em;
+    }
+    
+    .testimonyText small{
+        font-size: .75em;
+    }
 }
 
 @media screen and (max-width: 769px){
@@ -1354,6 +1512,40 @@ body{
         font-size: 2.75em;
         margin-bottom: 1em;
     }
+
+    #testimony h1{
+        font-size: 2.75em;
+        margin-bottom: 1em;
+    }
+
+    #testimony #testimonyContainer{
+        flex-direction: column;
+    }
+
+    #testimony #testimonyContainer .testimonyContent{
+        margin-bottom: 2em;
+    }
+    
+    #testimony #testimonyContainer .testimonyContent:last-child{
+        margin-bottom: 0;
+    }
+
+    .testimonyText p{
+        font-size: 1.75em;
+        margin-bottom: 0;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 18em;
+    }
+
+    .testimonyContent .testimonyText{
+        padding: 1em 1.75em 1.25em 1.75em;
+    }
+    
+    .testimonyText small{
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 680px){
@@ -1422,6 +1614,26 @@ body{
     
     .whyUsContent .whyUsText h2{
         font-size: 2em;
+    }
+
+    #testimony h1{
+        font-size: 2.25em;
+    }
+
+    .testimonyText p{
+        font-size: 1.5em;
+    }
+
+    .testimonyText small{
+        font-size: 1.25em;
+    }
+
+    .testimonyContent .testimonyText{
+        padding: .75em 1.5em 1em 1.5em;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 16em;
     }
 }
 
@@ -1609,6 +1821,22 @@ body{
 
     .whyUsContent .whyUsTextFlip p{
         font-size: 2.25em;
+    }
+
+    #whyUs #whyUsTitle h1{
+        font-size: 1.75em;
+    }
+
+    .testimonyText p{
+        font-size: 1.25em;
+    }
+
+    .testimonyText small{
+        font-size: 1em;
+    }
+
+    .testimonyContent .testimonyImage{
+        height: 14em;
     }
 }
 
