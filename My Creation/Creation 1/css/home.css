@@ -846,6 +846,103 @@ body{
     cursor: pointer;
 }
 
+#faq{
+    background-color: var(--blue);
+    padding: 2em 10% 2.5em 10%;
+}
+
+#faq h1{
+    font-family: 'Manuale SemiBold';
+    color: var(--blue3);
+    font-weight: normal;
+    font-size: 2.5em;
+
+    margin-bottom: 1em;
+    text-align: center;
+
+    line-height: 100%;
+}
+
+#faqContainer{
+    display:flex;
+    flex-direction: column;
+}
+
+.faqTitle{
+    padding: .75rem 1.5rem;
+    box-sizing: border-box;
+    border-bottom: .15em solid var(--blue3);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.faqTitle:hover{
+    opacity: .9;
+}
+
+.faqTitle h2{
+    color: var(--blue3);
+    font-family: 'Manuale SemiBold';
+    font-size: 1.5em;
+}
+
+.faqText{
+    border-bottom: .1em solid var(--blue3);
+    background-color: var(--white);
+    
+    max-height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .2s ease-in;
+}
+
+.faqText p{
+    padding: .75rem 1.25rem 1rem 1.25rem;
+    color: var(--blue3);
+    font-size: 1.25em;
+    font-family: 'Manuale Medium';
+    box-sizing: border-box;
+}
+
+#supportedBy{
+    background-color: var(--blue);
+    padding: 0em 10% 2.5em 10%;
+}
+
+#supportedBy h1{
+    font-family: 'Manuale SemiBold';
+    color: var(--blue3);
+    font-weight: normal;
+    font-size: 2.5em;
+
+    margin-bottom: 1em;
+    text-align: center;
+
+    line-height: 100%;
+}
+
+#supportedContainer{
+    display: flex;
+}
+
+.supportedContent{
+    flex-basis: 10%;
+    margin: auto;
+}
+
+.supportedContent:nth-child(6n + 1){
+    margin-left: 0;
+}
+
+.supportedContent:nth-child(6n + 6){
+    margin-right: 0;
+}
+
+.supportedContent img{
+    width: 100%;
+}
+
 @media screen and (min-width: 1628px){
     #menu ul li{
         font-size: 3em;
@@ -951,6 +1048,26 @@ body{
     }
 
     #portofolio h1{
+        font-size: 2.75em;
+    }
+
+    #faq{
+        padding: 2.25em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 2.75em;
+    }
+
+    .faqTitle h2{
+        font-size: 1.75em;
+    }
+
+    .faqText p{
+        font-size: 1.5em;
+    }
+
+    #supportedBy h1{
         font-size: 2.75em;
     }
 }
@@ -1097,6 +1214,26 @@ body{
     
     .portofolioImage{
         height: 19em;
+    }
+
+    #faq h1{
+        font-size: 3.25em;
+    }
+
+    .faqTitle h2{
+        font-size: 2em;
+    }
+
+    .faqText p{
+        font-size: 1.75em;
+    }
+
+    #supportedBy h1{
+        font-size: 3.25em;
+    }
+
+    .supportedContent{
+        flex-basis: 13%;
     }
 }
 
@@ -1252,6 +1389,34 @@ body{
     .portofolioImage{
         height: 20em;
     }
+
+    #faq{
+        padding: 3em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 3.75em;
+    }
+
+    .faqTitle h2{
+        font-size: 2.25em;
+    }
+
+    .faqText p{
+        font-size: 2em;
+    }
+
+    #supportedBy{
+        padding: 1em 10% 2.5em 10%;
+    }
+
+    #supportedBy h1{
+        font-size: 3.75em;
+    }
+
+    .supportedContent{
+        flex-basis: 13%;
+    }
 }
 
 @media screen and (min-width: 2340px){
@@ -1354,6 +1519,26 @@ body{
     
     .portofolioImage{
         height: 26em;
+    }
+
+    #faq{
+        padding: 3em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 4.25em;
+    }
+
+    .faqTitle h2{
+        font-size: 2.55em;
+    }
+
+    .faqText p{
+        font-size: 2.25em;
+    }
+
+    #supportedBy h1{
+        font-size: 4.25em;
     }
 }
 
@@ -1541,6 +1726,10 @@ body{
         font-size: 1.4em;
     }
 
+    #productContainer{
+        padding: 2em 10% 1.5em 10%;
+    }
+
     #productRightContainer{
         padding: 0 0 0 1.5em;
     }
@@ -1649,6 +1838,27 @@ body{
     
     .portofolioImage{
         height: 12em;
+    }
+
+    #faq{
+        padding: 1.5em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 1.75em;
+    }
+
+    .faqTitle h2{
+        font-size: 1.25em;
+    }
+
+    .faqText p{
+        font-size: 1em;
+    }
+
+    #supportedBy h1{
+        font-size: 1.75em;
+        margin-bottom: 1.5em;
     }
 }
 
@@ -1877,6 +2087,52 @@ body{
     .portofolioImage{
         height: 20em;
     }
+    
+    #faq{
+        padding: 2.25em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 2.75em;
+    }
+
+    .faqTitle h2{
+        font-size: 2em;
+        line-height: 100%;
+    }
+
+    .faqText p{
+        font-size: 1.75em;
+    }
+
+    #supportedBy h1{
+        font-size: 2.75em;
+    }
+
+    #supportedContainer{
+        flex-wrap: wrap;
+    }
+
+    .supportedContent{
+        flex-basis: 26%;
+        margin-bottom: 1em;
+    }
+
+    .supportedContent:nth-child(6n + 1){
+        margin-left: 0;
+    }
+
+    .supportedContent:nth-child(6n + 6){
+        margin-right: 0;
+    }
+
+    .supportedContent:nth-child(3n + 1){
+        margin-left: 0;
+    }
+
+    .supportedContent:nth-child(3n + 3){
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 680px){
@@ -1997,6 +2253,27 @@ body{
     
     .portofolioImage{
         height: 18em;
+    }
+
+    #faq{
+        padding: 2em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 2.25em;
+    }
+
+    .faqTitle h2{
+        font-size: 1.75em;
+        line-height: 100%;
+    }
+
+    .faqText p{
+        font-size: 1.5em;
+    }
+
+    #supportedBy h1{
+        font-size: 2.25em;
     }
 }
 
@@ -2244,6 +2521,32 @@ body{
     
     .portofolioImage{
         height: 14em;
+    }
+
+    #faq{
+        padding: 2em 10% 2.5em 10%;
+    }
+
+    #faq h1{
+        font-size: 1.75em;
+    }
+
+    .faqTitle{
+        padding: .75rem 1rem;
+    }
+
+    .faqTitle h2{
+        font-size: 1.5em;
+        line-height: 100%;
+    }
+
+    .faqText p{
+        font-size: 1.25em;
+        padding: .75rem 1rem 1rem 1rem;
+    }
+
+    #supportedBy h1{
+        font-size: 1.75em;
     }
 }
 

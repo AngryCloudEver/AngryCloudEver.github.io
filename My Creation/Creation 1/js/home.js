@@ -83,6 +83,20 @@ $(window).on('load', function(event){
         });
     });
 
+    $(".faqTitle").on("click", function(){
+        var panel = this.nextElementSibling;
+        var faqTitleClass = $(this);
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            this.style.backgroundColor = "#FFFAF9";
+            faqTitleClass.children("h2").css("color", "#1256A0");
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            this.style.backgroundColor = "#1256A0";
+            faqTitleClass.children("h2").css("color", "#FFFAF9");
+        }
+    });
+
     function productImageResize(){
         let productImageWidth = $("#productLeftImage").children().css('width');
         $("#productLeftImage").children().css('height', productImageWidth);
