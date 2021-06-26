@@ -802,7 +802,6 @@ body{
 }
 
 /*Portofolio */
-
 #portofolio{
     padding: 2.5em 10%;
 }
@@ -846,6 +845,7 @@ body{
     cursor: pointer;
 }
 
+/*FAQ*/
 #faq{
     background-color: var(--blue);
     padding: 2em 10% 2.5em 10%;
@@ -905,6 +905,8 @@ body{
     box-sizing: border-box;
 }
 
+/*Supported By*/
+
 #supportedBy{
     background-color: var(--blue);
     padding: 0em 10% 2.5em 10%;
@@ -941,6 +943,61 @@ body{
 
 .supportedContent img{
     width: 100%;
+}
+
+/*Start Success*/
+#startSuccess{
+    background-color: var(--blue2);
+    padding: 2em 10% 2.25em 10%;
+    box-sizing: border-box;
+}
+
+#startSuccessContainer{
+    display: flex;
+}
+
+#startSuccessLeft{
+    flex-basis: 50%;
+}
+
+#startSuccessRight{
+    flex-basis: 50%;
+}
+
+#startSuccessLeft h1{
+    font-family: 'Manuale SemiBold';
+    color: var(--white);
+    font-weight: normal;
+    font-size: 2.75em;
+
+    line-height: 100%;
+}
+
+#startSuccessButton{
+    background-color: var(--orange);
+    border: inherit;
+    border: .1em solid var(--orange);
+
+    font-family: 'Manuale Medium';
+    font-size: 2.5em;
+    color: var(--white);
+
+    padding: .2em .65em;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in;
+    box-sizing: border-box;
+
+    float: right;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+#startSuccessButton:hover{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 @media screen and (min-width: 1628px){
@@ -1069,6 +1126,15 @@ body{
 
     #supportedBy h1{
         font-size: 2.75em;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 3em;
+    }
+
+    #startSuccessButton{
+        font-size: 2.75em;
+        padding: .1em .65em .2em .65em;
     }
 }
 
@@ -1234,6 +1300,15 @@ body{
 
     .supportedContent{
         flex-basis: 13%;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 3.5em;
+    }
+
+    #startSuccessButton{
+        font-size: 3.25em;
+        padding: .1em .65em .2em .65em;
     }
 }
 
@@ -1417,6 +1492,19 @@ body{
     .supportedContent{
         flex-basis: 13%;
     }
+
+    #startSuccess{
+        padding: 3em 10% 3.25em 10%
+    }
+
+    #startSuccessLeft h1{
+        font-size: 4em;
+    }
+
+    #startSuccessButton{
+        font-size: 3.75em;
+        padding: .1em .65em .2em .65em;
+    }
 }
 
 @media screen and (min-width: 2340px){
@@ -1539,6 +1627,15 @@ body{
 
     #supportedBy h1{
         font-size: 4.25em;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 4.5em;
+    }
+
+    #startSuccessButton{
+        font-size: 4.25em;
+        padding: .1em .65em .2em .65em;
     }
 }
 
@@ -1860,6 +1957,15 @@ body{
         font-size: 1.75em;
         margin-bottom: 1.5em;
     }
+
+    #startSuccessLeft h1{
+        font-size: 2em;
+    }
+
+    #startSuccessButton{
+        font-size: 1.75em;
+        padding: .1em .65em .2em .65em;
+    }
 }
 
 @media screen and (max-width: 769px){
@@ -2133,6 +2239,27 @@ body{
     .supportedContent:nth-child(3n + 3){
         margin-right: 0;
     }
+
+    #startSuccessContainer{
+        flex-direction: column;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+
+    #startSuccessButton{
+        float: inherit;
+        top: inherit;
+        left: 50%;
+        transform: translateX(-50%);
+        -ms-transform: translateY(-50%);
+        margin: 0 auto;
+
+        font-size: 2.75em;
+    }
 }
 
 @media screen and (max-width: 680px){
@@ -2273,6 +2400,14 @@ body{
     }
 
     #supportedBy h1{
+        font-size: 2.25em;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 2.5em;
+    }
+
+    #startSuccessButton{
         font-size: 2.25em;
     }
 }
@@ -2545,7 +2680,19 @@ body{
         padding: .75rem 1rem 1rem 1rem;
     }
 
+    #supportedBy{
+        padding: 0em 10% 1em 10%;
+    }
+
     #supportedBy h1{
+        font-size: 1.75em;
+    }
+
+    #startSuccessLeft h1{
+        font-size: 2em;
+    }
+
+    #startSuccessButton{
         font-size: 1.75em;
     }
 }
