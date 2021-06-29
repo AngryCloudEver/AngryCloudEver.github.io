@@ -5,6 +5,8 @@ $(window).on('load', function(event){
         productImageResize();
     });
 
+    $("#footer").load('footer.html')
+
     $(".next").on("click", function(){
         let displayContent1 = $(".content1").css('display');
         if(displayContent1 == 'block'){
