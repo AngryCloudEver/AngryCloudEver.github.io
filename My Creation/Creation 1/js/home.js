@@ -1,4 +1,12 @@
 $(window).on('load', function(event){
+
+    jQuery(function($){
+        $("#loadingScreen").animate({opacity:0}, 800, function(){
+            $("#loadingScreen").remove();
+        });
+    })(jQuery);
+
+    loadingScreen();
     productImageResize();
 
     $(window).on("resize", function(){
@@ -98,6 +106,14 @@ $(window).on('load', function(event){
             faqTitleClass.children("h2").css("color", "#FFFAF9");
         }
     });
+
+    function loadingScreen(){
+        $("#loadingScreen").children().animate({opacity:0}, 800, function(){
+            $("#loadingScreen").children().animate({opacity:1}, 800); 
+        });
+    
+        setTimeout(loadingScreen, 3000);
+    }
 
     function productImageResize(){
         let productImageWidth = $("#productLeftImage").children().css('width');
