@@ -4,7 +4,7 @@ $(window).on('load', function(event){
         $("#loadingScreen").animate({opacity:0}, 800, function(){
             $("#loadingScreen").remove();
         });
-    })(jQuery);
+    });
 
     loadingScreen();
     productImageResize();
