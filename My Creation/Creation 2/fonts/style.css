@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Share Regular';
+    src: url('Share-Regular.ttf');
+}
+    
+@font-face {
+    font-family: 'Share Italic';
+    src: url('Share-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Share Bold';
+    src: url('Share-Bold.ttf');
+}
+    
+@font-face {
+    font-family: 'Share Bold Italic';
+    src: url('Share-BoldItalic.ttf');
+}

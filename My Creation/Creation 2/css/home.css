@@ -1,0 +1,163 @@
+body, *{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+}
+
+/*Header*/
+#header{
+    display: flex;
+}
+
+#leftHeaderContainer{
+    flex-basis: 5%;
+    overflow: hidden;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    padding: 3rem 0;
+
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#leftHeaderContainer .shareText{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Share Regular';
+    font-size: 2em;
+    line-height: 100%;
+
+    margin-block-end: 0;
+    margin-block-start: 0;
+
+    writing-mode: vertical-rl;
+
+    color: var(--black);
+}
+
+#leftHeaderContainer .shareIconContainer{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    gap: .25em;
+}
+
+#leftHeaderContainer .shareIcon{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#leftHeaderContainer .line{
+    width: 0px;
+    height: 4em;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: .05em solid var(--black);
+    margin: 1.5em 0;
+}
+
+#leftHeaderContainer .sideTitle{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Share Regular';
+    font-size: 2em;
+    line-height: 100%;
+
+    margin-block-end: 0;
+    margin-block-start: 0;
+
+    writing-mode: vertical-rl;
+
+    color: var(--black);
+}
+
+#middleHeaderContainer{
+    flex-basis: 63%;
+}
+
+#middleHeaderContainer #mainPoster{
+    width: 100%;
+}
+
+#rightHeaderContainer{
+    flex-basis: 32%;
+    overflow: hidden;
+    height: 100vh;
+    
+    position: sticky;
+    top: 0;
+
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+
+    padding: 2em 0;
+}
+
+#rightHeaderContainer .filmTitle{
+    font-family: 'Share Italic';
+    font-size: 5em;
+    text-align: center;
+
+    color: var(--black);
+}
+
+#rightHeaderContainer .filmDate{
+    font-family: 'Share Regular';
+    font-size: 3em;
+    text-align: center;
+
+    margin-top: 1rem;
+    color: var(--black);
+}
+
+#rightHeaderContainer #menu{
+    margin-top: 2.5rem;
+}
+
+#menu ul{
+    text-align: center;
+}
+
+#menu ul a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+#menu ul a li{
+    font-size: 2.5em;
+    font-family: 'Share Regular';
+    margin: .25em 0;
+}
+
+#rightHeaderContainer .downArrow{
+    width: 10%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 2.5rem;
+}
