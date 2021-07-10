@@ -9,6 +9,20 @@ body, *{
     width: 100%;
 }
 
+/*Floating Menu*/
+#floatingMenu{
+    display: none;
+
+    position: fixed;
+    top: 3em;
+    right: 3em;
+    z-index: 99;
+}
+
+#floatingMenu #menuIcon{
+    width: 5em;
+}
+
 /*Header*/
 #header{
     display: flex;
@@ -27,6 +41,13 @@ body, *{
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+#leftHeaderContainer #leftHeaderInnerContainer{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
 }
 
 #leftHeaderContainer .shareText{
@@ -117,9 +138,18 @@ body, *{
     padding: 2em 0;
 }
 
+#rightHeaderContainer #rightHeaderInnerContainer{
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
 #rightHeaderContainer .filmTitle{
     font-family: 'Share Italic';
-    font-size: 5em;
+    font-size: 4.25em;
     text-align: center;
 
     color: var(--black);
@@ -140,6 +170,7 @@ body, *{
 
 #menu ul{
     text-align: center;
+    list-style-type: none;
 }
 
 #menu ul a{
@@ -160,4 +191,291 @@ body, *{
     transform: translateX(-50%);
 
     margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 1920px){
+    #leftHeaderContainer .shareText{
+        font-size: 3.25em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 3.25em;
+    }
+
+    #leftHeaderContainer .shareIconContainer{
+        gap: 1em;
+    }
+
+    #leftHeaderContainer .line{
+        border: .25em solid var(--black);
+    }
+
+    #rightHeaderContainer .filmTitle{
+        font-size: 6em;
+    }
+
+    #rightHeaderContainer .filmDate{
+        font-size: 4.5em;
+    }
+
+    #menu ul a li{
+        font-size: 4em;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    #leftHeaderContainer .shareText{
+        font-size: 4.5em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 4.5em;
+    }
+
+    #leftHeaderContainer .shareIconContainer{
+        gap: 1.5em;
+        margin: 2.5em 0;
+    }
+
+    #leftHeaderContainer .line{
+        border: .25em solid var(--black);
+    }
+
+    #rightHeaderContainer .filmTitle{
+        font-size: 8em;
+    }
+
+    #rightHeaderContainer .filmDate{
+        font-size: 6.5em;
+    }
+
+    #menu ul a li{
+        font-size: 6em;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    @media screen and (min-height: 2160px){
+        #leftHeaderContainer .shareText{
+            font-size: 6em;
+        }
+    
+        #leftHeaderContainer .sideTitle{
+            font-size: 6em;
+        }
+    
+        #leftHeaderContainer .shareIconContainer{
+            gap: 2em;
+            margin: 4em 0;
+        }
+    
+        #leftHeaderContainer .line{
+            height: 8em;
+            border: .25em solid var(--black);
+        }
+    
+        #rightHeaderContainer .filmTitle{
+            font-size: 12em;
+        }
+    
+        #rightHeaderContainer .filmDate{
+            font-size: 9.5em;
+        }
+    
+        #menu ul a li{
+            font-size: 8em;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px){
+    #rightHeaderContainer .filmTitle{
+        font-size: 3.25em;
+    }
+
+    #rightHeaderContainer .filmDate{
+        font-size: 2.25em;
+    }
+
+    #menu ul a li{
+        font-size: 2.25em;
+    }
+
+    #rightHeaderContainer .downArrow{
+        margin-top: 1.5rem;
+    }
+
+    @media screen and (min-height: 910px){
+        #floatingMenu{
+            display: block;
+        }
+
+        #header{
+            flex-wrap: wrap;
+        }
+    
+        #leftHeaderContainer{
+            flex-basis: 10%;
+    
+            position: relative;
+            height: inherit;
+        }
+
+        #leftHeaderContainer .shareText{
+            font-size: 3em;
+        }
+
+        #leftHeaderContainer .sideTitle{
+            font-size: 3em;
+        }
+    
+        #middleHeaderContainer{
+            flex-basis: 90%;
+        }
+    
+        #rightHeaderContainer{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 769px){
+    #floatingMenu{
+        display: block;
+    }
+
+    #header{
+        flex-wrap: wrap;
+    }
+
+    #leftHeaderContainer{
+        flex-basis: 10%;
+
+        position: relative;
+        height: inherit;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 2.25em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 2.25em;
+    }
+
+    #middleHeaderContainer{
+        flex-basis: 90%;
+    }
+
+    #rightHeaderContainer{
+        display: none;
+        opacity: 0;
+        right: -300px;
+    }
+
+    #rightHeaderContainer .downArrow{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #leftHeaderContainer{
+        padding: 2em 0;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 1.75em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 1.75em;
+    }
+}
+
+@media screen and (max-width: 481px){
+    #leftHeaderContainer{
+        padding: 2em 0;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 1.5em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 1.5em;
+    }
+
+    #leftHeaderContainer .line{
+        height: 1em;
+    }
+
+    #floatingMenu{
+        right: 2em;
+        top: 2em;
+    }
+
+    #floatingMenu #menuIcon{
+        width: 4em;
+    }
+}
+
+@media screen and (max-width: 426px){
+    #leftHeaderContainer{
+        padding: 2em 0;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 1.25em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 1.25em;
+    }
+
+    #leftHeaderContainer .line{
+        height: 1em;
+    }
+
+    #leftHeaderContainer .shareIconContainer{
+        margin: 1em 0
+    }
+
+    #floatingMenu{
+        right: 1.5em;
+        top: 3em;
+    }
+
+    #floatingMenu #menuIcon{
+        width: 3em;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #leftHeaderContainer{
+        padding: 1em 0;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 1em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 1em;
+    }
+
+    #leftHeaderContainer .line{
+        margin: .5em 0;
+    }
+
+    #floatingMenu{
+        right: 1em;
+        top: 2em;
+    }
+
+    #floatingMenu #menuIcon{
+        width: 2em;
+    }
 }

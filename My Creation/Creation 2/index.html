@@ -14,8 +14,12 @@
 </head>
 <body>
     <div id="container">
+        <div id="floatingMenu">
+            <img src="images/menu_icon.png" alt="Menu Icon" id="menuIcon">
+        </div>
         <div id="header">
             <div id="leftHeaderContainer">
+                <div id="leftHeaderInnerContainer">
                     <p class="shareText">SHARE</p>
                     <div class="shareIconContainer">
                         <a href="#">
@@ -31,28 +35,32 @@
                     <div class="line"></div>
                     <p class="sideTitle">MOVIE NAME PROJECT</p>
                     <div class="line"></div>
+                </div>
             </div>
             <div id="middleHeaderContainer">
                 <img src="images/poster_gradient.png" alt="Poster" id="mainPoster">
             </div>
             <div id="rightHeaderContainer">
-                <h1 class="filmTitle">FILM NAME EXAMPLE</h1>
-                <h2 class="filmDate">27/05/2021</h2>
-                <div id="menu">
-                    <ul>
-                        <a href="#"><li>NEWS</li></a>
-                        <a href="#"><li>INTRODUCTION</li></a>
-                        <a href="#"><li>CHARACTER</li></a>
-                        <a href="#"><li>ON AIR</li></a>
-                        <a href="#"><li>CAST/ STAFF</li></a>
-                        <a href="#"><li>VIDEOS</li></a>
-                    </ul>
+                <div id="rightHeaderInnerContainer">
+                    <h1 class="filmTitle">FILM NAME EXAMPLE</h1>
+                    <h2 class="filmDate">27/05/2021</h2>
+                    <div id="menu">
+                        <ul>
+                            <a href="#"><li>NEWS</li></a>
+                            <a href="#"><li>INTRODUCTION</li></a>
+                            <a href="#"><li>CHARACTER</li></a>
+                            <a href="#"><li>ON AIR</li></a>
+                            <a href="#"><li>CAST/ STAFF</li></a>
+                            <a href="#"><li>VIDEOS</li></a>
+                        </ul>
+                    </div>
+                    <img src="images/down_arrow.png" alt="Down Arow" class="downArrow">
                 </div>
-                <img src="images/down_arrow.png" alt="Down Arow" class="downArrow">
             </div>
         </div>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
