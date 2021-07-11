@@ -14,7 +14,10 @@ $(window).on('load', function(event){
         $("#rightHeaderContainer").css("position", "fixed");
         $("#rightHeaderContainer").css("width", "70%");
         $("#rightHeaderContainer").css("max-width", "400px");
-        if(window.innerWidth <= 854 && window.innerHeight <= 480){
+        if(window.innerWidth <= 854 && window.innerHeight <= 400){
+            $("#rightHeaderContainer").css("max-width", "200px");
+        }
+        else if(window.innerWidth <= 854 && window.innerHeight <= 480){
             $("#rightHeaderContainer").css("max-width", "300px");
         }
         $("#floatingMenu").animate({opacity: 0, right: 0}, 800);

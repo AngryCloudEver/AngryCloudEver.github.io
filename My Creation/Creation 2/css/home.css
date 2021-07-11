@@ -384,6 +384,29 @@ body, *{
             display: none;
         }
     }
+
+    @media screen and (max-height: 400px){
+        #rightHeaderContainer .filmTitle{
+            font-size: 2em;
+        }
+
+        #rightHeaderContainer .filmDate{
+            font-size: 1.5em;
+            margin-top: .5rem;
+        }
+
+        #rightHeaderContainer #menu{
+            margin-top: .5rem;
+        }
+
+        #menu ul a li{
+            font-size: 1.5em;
+        }
+
+        #rightHeaderContainer .downArrow{
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 769px){
