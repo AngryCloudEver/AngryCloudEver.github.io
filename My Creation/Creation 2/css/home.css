@@ -342,42 +342,88 @@ body, *{
     }
 }
 
+@media screen and (max-width: 897px){
+    @media screen and (max-height: 481px){
+        #floatingMenu{
+            display: block;
+            right: 3em;
+        }
+
+        #leftHeaderContainer{
+            display: none;
+        }
+
+        #middleHeaderContainer{
+            flex-basis: 100%;
+        }
+
+        #rightHeaderContainer{
+            display: none;
+            opacity: 0;
+            right: -300px;
+        }
+
+        #rightHeaderContainer .filmTitle{
+            font-size: 2.5em;
+        }
+
+        #rightHeaderContainer .filmDate{
+            font-size: 1.75em;
+            margin-top: .5rem;
+        }
+
+        #rightHeaderContainer #menu{
+            margin-top: 1.5rem;
+        }
+
+        #menu ul a li{
+            font-size: 1.75em;
+        }
+
+        #rightHeaderContainer .downArrow{
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 769px){
-    #floatingMenu{
-        display: block;
-    }
+    @media screen and (min-height: 482px){
+        #floatingMenu{
+            display: block;
+        }
 
-    #header{
-        flex-wrap: wrap;
-    }
+        #header{
+            flex-wrap: wrap;
+        }
 
-    #leftHeaderContainer{
-        flex-basis: 10%;
+        #leftHeaderContainer{
+            flex-basis: 10%;
 
-        position: relative;
-        height: inherit;
-    }
+            position: relative;
+            height: inherit;
+        }
 
-    #leftHeaderContainer .shareText{
-        font-size: 2.25em;
-    }
+        #leftHeaderContainer .shareText{
+            font-size: 2.25em;
+        }
 
-    #leftHeaderContainer .sideTitle{
-        font-size: 2.25em;
-    }
+        #leftHeaderContainer .sideTitle{
+            font-size: 2.25em;
+        }
 
-    #middleHeaderContainer{
-        flex-basis: 90%;
-    }
+        #middleHeaderContainer{
+            flex-basis: 90%;
+        }
 
-    #rightHeaderContainer{
-        display: none;
-        opacity: 0;
-        right: -300px;
-    }
+        #rightHeaderContainer{
+            display: none;
+            opacity: 0;
+            right: -300px;
+        }
 
-    #rightHeaderContainer .downArrow{
-        display: none;
+        #rightHeaderContainer .downArrow{
+            display: none;
+        }
     }
 }
 
@@ -397,19 +443,11 @@ body, *{
 
 @media screen and (max-width: 481px){
     #leftHeaderContainer{
-        padding: 2em 0;
+        display: none;
     }
 
-    #leftHeaderContainer .shareText{
-        font-size: 1.5em;
-    }
-
-    #leftHeaderContainer .sideTitle{
-        font-size: 1.5em;
-    }
-
-    #leftHeaderContainer .line{
-        height: 1em;
+    #middleHeaderContainer{
+        flex-basis: 100%;
     }
 
     #floatingMenu{
@@ -453,7 +491,7 @@ body, *{
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 376px){
     #leftHeaderContainer{
         padding: 1em 0;
     }
@@ -471,11 +509,11 @@ body, *{
     }
 
     #floatingMenu{
-        right: 1em;
-        top: 2em;
+        right: 1.5em;
+        top: 1.5em;
     }
 
     #floatingMenu #menuIcon{
-        width: 2em;
+        width: 3em;
     }
 }
