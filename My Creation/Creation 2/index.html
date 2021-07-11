@@ -58,9 +58,90 @@
                 </div>
             </div>
         </div>
+        <div id="floatingContainer">
+            <video controls loop id="floatingTrailerVideo">
+                <source src="videos/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="images/close_icon.png" alt="Close Icon" class="closeIcon">
+        </div>
+        <div id="trailer">
+            <div id="topTrailerContainer">
+                <h1 id="filmAuthor">
+                    A Film by <b>Estella Figueroa</b>
+                </h1>
+            </div>
+            <div id="bottomTrailerContainer">
+                <div id="leftTrailerContainer">
+                    <div id="trailerVideoContainer">
+                        <div id="trailerVideoBlackScreen"></div>
+                        <video muted loop autoplay id="trailerVideo">
+                            <source src="videos/trailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="images/play_icon.png" alt="Pause Button" class="videoPlayButton">
+                    </div>
+                    <div id="trailerCastContainer">
+                        <div class="trailerCastContent">
+                            <h2 class="trailerCastName">
+                                <b>
+                                    Ken Adams
+                                </b>
+                            </h2>
+                            <h2 class="trailerCastName">
+                                as Bill Nairn
+                            </h2>
+                        </div>
+                        <div class="trailerCastContent">
+                            <h2 class="trailerCastName">
+                                <b>
+                                    Regina Phalance
+                                </b>
+                            </h2>
+                            <h2 class="trailerCastName">
+                                as Martina Colon
+                            </h2>
+                        </div>
+                        <div class="trailerCastContent">
+                            <h2 class="trailerCastName">
+                                <b>
+                                    John Smith
+                                </b>
+                            </h2>
+                            <h2 class="trailerCastName">
+                                as Ihsan Oneal
+                            </h2>
+                        </div>
+                        <div class="trailerCastContent">
+                            <h2 class="trailerCastName">
+                                <b>
+                                    Laura Lyma
+                                </b>
+                            </h2>
+                            <h2 class="trailerCastName">
+                                as Hallie Xiong
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightTrailerContainer">
+                    <h1 id="trailerText">
+                        TRAILER
+                    </h1>
+                    <a href="#">
+                        <div class="more">
+                            <p>More</p>
+                            <span class="iconify" data-inline="false" data-icon="openmoji:next-track-button" style="font-size: 1.75rem;"></span>
+                        </div>
+                    </a>
+                    <img src="images/decoration_1.png" alt="Decoration" class="decoration">
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/home.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 </html>

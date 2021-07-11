@@ -5,6 +5,10 @@ body, *{
     box-sizing: border-box;
 }
 
+body{
+    background: var(--blue3);   
+}
+
 #container{
     width: 100%;
 }
@@ -117,6 +121,7 @@ body, *{
 
 #middleHeaderContainer{
     flex-basis: 63%;
+    background-color: var(--blue3);
 }
 
 #middleHeaderContainer #mainPoster{
@@ -131,9 +136,7 @@ body, *{
     position: sticky;
     top: 0;
 
-    background-image: url("../images/background.png");
-    background-repeat: no-repeat;
-    background-size: 200%;
+    background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
 
     padding: 2em 0;
 }
@@ -191,6 +194,191 @@ body, *{
     transform: translateX(-50%);
 
     margin-top: 2.5rem;
+}
+
+/*Floating Trailer*/
+#floatingContainer{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 18, 21, 0.75);
+
+    z-index: 100;
+
+    display: none;
+}
+
+#floatingContainer #floatingTrailerVideo{
+    position: absolute;
+    width: 75%;
+    z-index: 1;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#floatingContainer .closeIcon{
+    position: absolute;
+    z-index: 2;
+    width: 5%;
+    top: 5%;
+    right: 5%;
+
+    transition: opacity .4s ease-in-out;
+
+    cursor: pointer;
+}
+
+#floatingContainer .closeIcon:hover{
+    opacity: .8;
+}
+
+/*Trailer*/
+#trailer{
+    padding: 2rem 0 2rem 5%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#trailer #filmAuthor{
+    font-family: 'Share Regular';
+    font-weight: normal;
+    font-size: 4rem;
+
+    padding-bottom: 1rem;
+}
+
+#filmAuthor b{
+    font-family: 'Share Bold';
+    font-weight: normal;
+}
+
+#bottomTrailerContainer{
+    display: flex;
+}
+
+#bottomTrailerContainer #leftTrailerContainer{
+    flex-basis: 66%;
+}
+
+#leftTrailerContainer #trailerVideoBlackScreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+#leftTrailerContainer #trailerVideo{
+    width: 100%;
+}
+
+#leftTrailerContainer #trailerVideoContainer{
+    position: relative;
+    cursor: pointer;
+}
+
+#trailerVideoContainer .videoPlayButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    width: 20%;
+    opacity: 1;
+
+    transition: opacity .4s ease-in-out;
+}
+
+#trailerVideoContainer:hover .videoPlayButton{
+    opacity: .8;
+}
+
+#leftTrailerContainer #trailerCastContainer{
+    padding-top: 1em;
+
+    display: flex;
+    gap: 2em;
+}
+
+#trailerCastContainer .trailerCastName{
+    font-size: 2em;
+    font-family: 'Share Regular';
+    font-weight: normal;
+}
+
+#trailerCastContainer .trailerCastName b{
+    font-family: 'Share Bold';
+}
+
+#trailerCastContainer .trailerCastAs{
+    font-size: 2em;
+    font-family: 'Share Regular';
+    font-weight: normal;
+}
+
+#bottomTrailerContainer #rightTrailerContainer{
+    flex-basis: 34%;
+    position: relative;
+}
+
+#rightTrailerContainer #trailerText{
+    font-family: 'Share Bold';
+    font-size: 5rem;
+    writing-mode: vertical-rl;
+}
+
+#rightTrailerContainer .more{
+    align-items: center;
+
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    gap: .5rem;
+}
+
+#rightTrailerContainer .more{
+    transition: opacity .4s ease-in-out;
+}
+
+#rightTrailerContainer .more:hover{
+    opacity: .8;
+}
+
+#rightTrailerContainer a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+#rightTrailerContainer .more p{
+    display: inline-block;
+    font-family: 'Share Regular';
+    font-size: 2rem;
+}
+
+#rightTrailerContainer .more .iconify{
+    position: relative !important;
+    transform: translateY(15%) !important;
+}
+
+#rightTrailerContainer .more img{
+    width: 2%;
+}
+
+#rightTrailerContainer .decoration{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
 }
 
 @media screen and (min-width: 1920px){
