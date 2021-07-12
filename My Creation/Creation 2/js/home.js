@@ -9,6 +9,21 @@ $(window).on('load', function(event){
         location.reload(true);
     });*/
 
+    $(".filmTitle").animate({opacity: 1, top: 0}, 800);
+    $(".filmDate").delay(50).animate({opacity: 1, top: 0}, 800);
+    $("#leftHeaderContainer").children().delay(50).animate({opacity: 1, left: 0}, 800);
+    $("#middleHeaderContainer").delay(50).animate({opacity:1}, 800);
+
+    let listMenu = $(".menuList");
+    let listMenuNumber = $(".menuList").length;
+
+    listMenu.each(function(index){
+        $(this).delay(index * 125).animate({opacity: 1, top: 0}, 800);
+    });
+
+    $(".downArrow").delay(++listMenuNumber * 125).animate({opacity: 1, top: 0}, 800);
+
+    
     $(".downArrow").on("click", function(){
         let targetScroll = $("#header").outerHeight();
         $('html, body').animate({scrollTop: targetScroll}, 1500);
