@@ -39,12 +39,8 @@ body{
 
     position: sticky;
     top: 0;
-
+    background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
     padding: 3rem 0;
-
-    background-image: url("../images/background.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 #leftHeaderContainer #leftHeaderInnerContainer{
@@ -139,6 +135,7 @@ body{
     background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
 
     padding: 2em 0;
+    z-index: 99;
 }
 
 #rightHeaderContainer #rightHeaderInnerContainer{
@@ -151,24 +148,26 @@ body{
 }
 
 #rightHeaderContainer .filmTitle{
-    font-family: 'Share Italic';
-    font-size: 4.25em;
+    font-family: 'Indie Flower Regular';
+    font-size: 4.5em;
     text-align: center;
+    line-height: 1;
 
     color: var(--black);
 }
 
 #rightHeaderContainer .filmDate{
-    font-family: 'Share Regular';
-    font-size: 3em;
+    font-family: 'Indie Flower Regular';
+    font-size: 3.5em;
     text-align: center;
+    line-height: 1;
 
     margin-top: 1rem;
     color: var(--black);
 }
 
 #rightHeaderContainer #menu{
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 #menu ul{
@@ -212,31 +211,28 @@ body{
     display: none;
 }
 
-#floatingContainer #floatingTrailerVideo{
-    position: absolute;
+#floatingContainer #floatingVideoContainer{
+    position: relative;
     width: 75%;
-    z-index: 1;
-
     top: 50%;
     left: 50%;
 
     transform: translateX(-50%) translateY(-50%);
 }
 
+#floatingContainer #floatingTrailerVideo{
+    width: 100%;
+    z-index: 1;
+}
+
 #floatingContainer .closeIcon{
     position: absolute;
     z-index: 2;
     width: 5%;
-    top: 5%;
-    right: 5%;
-
-    transition: opacity .4s ease-in-out;
+    top: -2%;
+    right: -2%;
 
     cursor: pointer;
-}
-
-#floatingContainer .closeIcon:hover{
-    opacity: .8;
 }
 
 /*Trailer*/
@@ -247,12 +243,31 @@ body{
     flex-direction: column;
 }
 
+#topTrailerContainer #filmInfoMobile{
+    display: none;
+    margin-bottom: 1rem;
+}
+
+#filmInfoMobile #filmTitleMobile{
+    font-family: 'Share Bold';
+    font-size: 5rem;
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+#filmInfoMobile #filmDateMobile{
+    font-family: 'Share Regular';
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
 #trailer #filmAuthor{
     font-family: 'Share Regular';
     font-weight: normal;
     font-size: 4rem;
-
-    padding-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 #filmAuthor b{
@@ -337,10 +352,11 @@ body{
 }
 
 #rightTrailerContainer .more{
+    display: inline-block;
     align-items: center;
 
-    padding-left: 1rem;
-    padding-top: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
 
     gap: .5rem;
 }
@@ -357,7 +373,6 @@ body{
     text-decoration: none;
     color: var(--black);
 }
-
 
 #rightTrailerContainer .more p{
     display: inline-block;
@@ -378,6 +393,7 @@ body{
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -410,6 +426,26 @@ body{
         font-size: 4em;
         margin: 0;
     }
+
+    #trailer #filmAuthor{
+        font-size: 5.5rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 6rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 3rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 2.75rem !important;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 3rem;
+    }
 }
 
 @media screen and (min-width: 2560px){
@@ -441,6 +477,30 @@ body{
     #menu ul a li{
         font-size: 6em;
         margin: 0;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 6.5rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 7rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 4rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 3.75rem !important;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 4rem;
+    }
+
+    #bottomTrailerContainer #rightTrailerContainer{
+        padding-left: .5rem;
     }
 }
 
@@ -479,21 +539,171 @@ body{
     }
 }
 
+@media screen and (min-width: 3440px){
+    #trailer #filmAuthor{
+        font-size: 7.5rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        gap: 4em;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 10rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 5rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 4.75rem !important;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 5rem;
+    }
+
+    #bottomTrailerContainer #rightTrailerContainer{
+        padding-left: .5rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 3840px){
+    #trailer{
+        padding: 4rem 0 4rem 5%
+    }
+
+    #trailer #filmAuthor{
+        font-size: 8.5rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: 3em;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 12rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 6rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 5.5rem !important;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 5.75rem;
+    }
+
+    #bottomTrailerContainer #rightTrailerContainer{
+        padding-left: .5rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 1286px){
+    #trailer #filmAuthor{
+        font-size: 3.5rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 4.5rem;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 1.75rem;
+    }
+}
+
 @media screen and (max-width: 1025px){
+    #floatingContainer #floatingVideoContainer{
+        width: 85%;
+    }
+
+    #floatingContainer .closeIcon{
+        width: 10%;
+        top: -6%;
+        right: -4%;
+    }
+
+    #floatingMenu #menuIcon{
+        width: 8em;
+    }
+
+    #leftHeaderContainer .line{
+        height: 2em;
+    }
+
+    #leftHeaderContainer .sideTitle{
+        font-size: 1.5em;
+    }
+
+    #leftHeaderContainer .shareText{
+        font-size: 1.5em;
+    }
+
     #rightHeaderContainer .filmTitle{
-        font-size: 3.25em;
+        font-size: 3.5em;
     }
 
     #rightHeaderContainer .filmDate{
-        font-size: 2.25em;
+        font-size: 2.5em;
     }
 
     #menu ul a li{
-        font-size: 2.25em;
+        font-size: 2em;
     }
 
     #rightHeaderContainer .downArrow{
         margin-top: 1.5rem;
+    }
+
+    #trailer{
+        padding: 2rem 0 2rem 5%;
+    }
+
+    #topTrailerContainer #filmInfoMobile{
+        display: block;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 4.25rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 3.25rem;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 3rem;
+    }
+
+    #bottomTrailerContainer #leftTrailerContainer{
+        flex-basis: 80%;
+    }
+
+    #bottomTrailerContainer #rightTrailerContainer{
+        flex-basis: 20%;
+        overflow: hidden;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 4rem;
+    }
+
+    #rightTrailerContainer .decoration{
+        height: 50%;
+        width: inherit;
     }
 
     @media screen and (min-height: 910px){
@@ -526,7 +736,59 @@ body{
     
         #rightHeaderContainer{
             display: none;
+            right: -100px;
+            opacity: 0; 
         }
+
+        #trailer{
+            padding: 2rem 0 2rem 10%;
+        }
+
+        #filmInfoMobile #filmTitleMobile{
+            font-size: 4.25rem;
+        }
+
+        #filmInfoMobile #filmDateMobile{
+            font-size: 3.25rem;
+        }
+
+        #trailer #filmAuthor{
+            font-size: 3.25rem;
+        }
+
+        #rightTrailerContainer #trailerText{
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 901px){
+    #trailer #filmAuthor{
+        font-size: 2.75rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 3.75rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-left: .5rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: .75rem;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 4rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 3rem;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 1.5rem;
     }
 }
 
@@ -535,6 +797,10 @@ body{
         #floatingMenu{
             display: block;
             right: 3em;
+        }
+
+        #floatingMenu #menuIcon{
+            width: 5em;
         }
 
         #leftHeaderContainer{
@@ -571,6 +837,15 @@ body{
         #rightHeaderContainer .downArrow{
             display: none;
         }
+
+        #floatingContainer #floatingVideoContainer{
+            width: 65%;
+        }
+
+        #leftTrailerContainer #trailerCastContainer{
+            gap: 1em;
+            padding-top: .5rem;
+        }
     }
 
     @media screen and (max-height: 400px){
@@ -601,6 +876,10 @@ body{
     @media screen and (min-height: 482px){
         #floatingMenu{
             display: block;
+        }
+
+        #floatingMenu #menuIcon{
+            width: 5em;
         }
 
         #header{
@@ -635,10 +914,96 @@ body{
         #rightHeaderContainer .downArrow{
             display: none;
         }
+
+        #trailer{
+            padding: 2rem 0 2rem 10%;
+        }
+
+        #trailer #filmAuthor{
+            font-size: 2.5rem;
+        }
+    
+        #rightTrailerContainer #trailerText{
+            font-size: 3.5rem;
+        }
+    
+        #leftTrailerContainer #trailerCastContainer{
+            padding-top: .5rem;
+        }
+    
+        #filmInfoMobile #filmTitleMobile{
+            font-size: 3.5rem;
+        }
+    
+        #filmInfoMobile #filmDateMobile{
+            font-size: 2.5rem;
+        }
+    
+        #trailerCastContainer .trailerCastName{
+            font-size: 1.25rem;
+        }
+
+        #rightTrailerContainer #trailerText{
+            font-size: 3rem;
+        }
+
+        #rightTrailerContainer .more{
+            margin-top: .5rem;
+            margin-left: .5rem;
+        }
+
+        #rightTrailerContainer .more p{
+            font-size: 1.5rem;
+        }
+
+        #rightTrailerContainer .more .iconify{
+            font-size: 1.25rem !important;
+        }
+    }
+    @media screen and (max-height: 482px){
+        #trailer{
+            padding: 2rem 0 2rem 5%;
+        }
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 3.5rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 3rem;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 2.25rem;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 1.25rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 3rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 1.5rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 1.25rem !important; 
+    }
+
+    #rightTrailerContainer .more{
+        margin-top: .5rem;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 601px){
+    #floatingMenu #menuIcon{
+        width: 6em;
+    }
+
     #leftHeaderContainer{
         padding: 2em 0;
     }
@@ -649,6 +1014,55 @@ body{
 
     #leftHeaderContainer .sideTitle{
         font-size: 1.75em;
+    }
+
+    #trailer{
+        padding: 1.5rem 0 1.5rem 10%;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 2rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 3rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: .5rem;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 3rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 2rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        gap: 1em;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: 1rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 2.25rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-top: .5rem;
+        margin-left: .5rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 1.25rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: 1rem !important;
     }
 }
 
@@ -668,6 +1082,47 @@ body{
 
     #floatingMenu #menuIcon{
         width: 4em;
+    }
+
+    #trailer{
+        padding: 1rem 0 1rem 5%;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 2.25rem;
+    }
+
+    #topTrailerContainer #filmInfoMobile{
+        margin-bottom: .5rem;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 1.5rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 1.75rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: .25rem;
+        gap: .5em;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: .9rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 2rem;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: 1rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: .75rem !important;
     }
 }
 
@@ -694,15 +1149,57 @@ body{
 
     #floatingMenu{
         right: 1.5em;
-        top: 3em;
+        top: 2em;
     }
 
     #floatingMenu #menuIcon{
-        width: 3em;
+        width: 4em;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 2rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 1.5rem;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 1.25rem;
+        margin-bottom: .25rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: 0;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: .75rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 1.75rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-left: .4rem;
+        margin-top: 0;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: .75rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: .5rem !important;
     }
 }
 
 @media screen and (max-width: 376px){
+    #floatingMenu #menuIcon{
+        width: 4em;
+    }
+
     #leftHeaderContainer{
         padding: 1em 0;
     }
@@ -724,7 +1221,45 @@ body{
         top: 1.5em;
     }
 
-    #floatingMenu #menuIcon{
-        width: 3em;
+    #topTrailerContainer #filmInfoMobile{
+        margin-bottom: .25rem;
+    }
+
+    #filmInfoMobile #filmTitleMobile{
+        font-size: 1.75rem;
+    }
+
+    #filmInfoMobile #filmDateMobile{
+        font-size: 1.5rem;
+    }
+
+    #trailer #filmAuthor{
+        font-size: 1rem;
+        margin-bottom: .25rem;
+    }
+
+    #leftTrailerContainer #trailerCastContainer{
+        padding-top: 0;
+    }
+
+    #trailerCastContainer .trailerCastName{
+        font-size: .65rem;
+    }
+
+    #rightTrailerContainer #trailerText{
+        font-size: 1.5rem;
+    }
+
+    #rightTrailerContainer .more{
+        margin-left: .25rem;
+        margin-top: 0;
+    }
+
+    #rightTrailerContainer .more p{
+        font-size: .75rem;
+    }
+
+    #rightTrailerContainer .more .iconify{
+        font-size: .5rem !important;
     }
 }

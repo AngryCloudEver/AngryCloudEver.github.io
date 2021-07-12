@@ -17,3 +17,8 @@
     font-family: 'Share Bold Italic';
     src: url('Share-BoldItalic.ttf');
 }
+
+@font-face {
+    font-family: 'Indie Flower Regular';
+    src: url('IndieFlower-Regular.ttf');
+}

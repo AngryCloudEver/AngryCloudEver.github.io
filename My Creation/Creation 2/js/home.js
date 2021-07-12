@@ -33,23 +33,34 @@ $(window).on('load', function(event){
                 menu.animate({opacity: 0, right: "-100px"}, 800);
 
                 if(window.innerWidth >= 481 && window.innerHeight <= 480){
-                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800);
+                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
                 else if(window.innerWidth >= 481){
-                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800);
+                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
                 else if(window.innerWidth >= 426){
-                    $("#floatingMenu").animate({opacity: 1, right: "2em"}, 800);
+                    $("#floatingMenu").animate({opacity: 1, right: "2em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
                 else if(window.innerWidth >= 376){
-                    $("#floatingMenu").animate({opacity: 1, right: "1.5em"}, 800);
+                    $("#floatingMenu").animate({opacity: 1, right: "1.5em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
                 else if(window.innerWidth >= 321){
-                    $("#floatingMenu").animate({opacity: 1, right: "1.5em"}, 800);
-                    console.log("test");
+                    $("#floatingMenu").animate({opacity: 1, right: "1.5em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
                 else{
-                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800);
+                    $("#floatingMenu").animate({opacity: 1, right: "3em"}, 800, function(){
+                        $("#rightHeaderContainer").delay(800).css("display", "none");
+                    });
                 }
             }
         }
@@ -61,7 +72,7 @@ $(window).on('load', function(event){
         $("#floatingTrailerVideo").get(0).play();
     });
 
-    $("#floatingContainer").children(".closeIcon").on('click', function(){
+    $("#floatingVideoContainer").children(".closeIcon").on('click', function(){
         $("#floatingContainer").css('display', 'none');
         $("#floatingTrailerVideo").get(0).pause();
     });
