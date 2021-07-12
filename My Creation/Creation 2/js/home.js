@@ -11,7 +11,7 @@ $(window).on('load', function(event){
 
     $(".downArrow").on("click", function(){
         let targetScroll = $("#header").outerHeight();
-        $('html, body').animate({scrollTop: targetScroll}, 800);
+        $('html, body').animate({scrollTop: targetScroll}, 1500);
     });
 
     $("#floatingMenu").on("click", function(){
