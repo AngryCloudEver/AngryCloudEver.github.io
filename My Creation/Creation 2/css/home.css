@@ -240,6 +240,14 @@ body{
     opacity: .75 !important;
 }
 
+#rightHeaderContainer .decoration{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 /*Floating Trailer*/
 #floatingContainer{
     position: fixed;
@@ -1134,7 +1142,7 @@ body{
     }
 
     #filmInfoMobile #filmTitleMobile{
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     #topTrailerContainer #filmInfoMobile{
@@ -1142,11 +1150,11 @@ body{
     }
 
     #trailer #filmAuthor{
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     #filmInfoMobile #filmDateMobile{
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     #leftTrailerContainer #trailerCastContainer{
@@ -1155,7 +1163,7 @@ body{
     }
 
     #trailerCastContainer .trailerCastName{
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     #rightTrailerContainer #trailerText{
@@ -1202,15 +1210,15 @@ body{
     }
 
     #filmInfoMobile #filmTitleMobile{
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     #filmInfoMobile #filmDateMobile{
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     #trailer #filmAuthor{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-bottom: .25rem;
     }
 
@@ -1219,11 +1227,11 @@ body{
     }
 
     #trailerCastContainer .trailerCastName{
-        font-size: .75rem;
+        font-size: 1rem;
     }
 
     #rightTrailerContainer #trailerText{
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     #rightTrailerContainer .more{
