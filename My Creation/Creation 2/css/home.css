@@ -962,6 +962,12 @@ body{
             display: none;
             opacity: 0;
             right: -300px;
+
+            background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+        }
+
+        #rightHeaderContainer .decoration{
+            display: none;
         }
 
         #rightHeaderContainer .downArrow{
