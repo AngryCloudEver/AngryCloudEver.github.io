@@ -193,6 +193,13 @@ body{
     transform: translateX(-50%);
 
     margin-top: 2.5rem;
+    cursor: pointer;
+
+    transition: opacity .2s ease-in-out;
+}
+
+#rightHeaderContainer .downArrow:hover{
+    opacity: .75;
 }
 
 /*Floating Trailer*/

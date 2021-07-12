@@ -9,6 +9,11 @@ $(window).on('load', function(event){
         location.reload(true);
     });*/
 
+    $(".downArrow").on("click", function(){
+        let targetScroll = $("#header").outerHeight();
+        $('html, body').animate({scrollTop: targetScroll}, 800);
+    });
+
     $("#floatingMenu").on("click", function(){
         $("#rightHeaderContainer").css("display", "block");
         $("#rightHeaderContainer").css("position", "fixed");
