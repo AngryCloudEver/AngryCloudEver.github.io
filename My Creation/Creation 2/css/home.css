@@ -5,12 +5,18 @@ body, *{
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+.cursorChange{
+    cursor: url('../images/image_cursor.png'), auto;	
 }
 
 #container{
     width: 100%;
+    background: linear-gradient(180deg, #D2E7EE 0%, #D2E7EE 80%, #FEFBF4 100%);
+}
+
+#container2{
+    width: 100%;
+    background-color: var(--white);
 }
 
 /*Floating Menu*/
@@ -402,9 +408,11 @@ body{
     font-family: 'Share Bold';
     font-size: 5rem;
     writing-mode: vertical-rl;
+    position: relative;
+    z-index: 1;
 }
 
-#rightTrailerContainer .more{
+.more{
     display: inline-block;
     align-items: center;
 
@@ -412,13 +420,16 @@ body{
     margin-top: 1rem;
 
     gap: .5rem;
+
+    position: relative;
+    z-index: 1;
 }
 
-#rightTrailerContainer .more{
+.more{
     transition: opacity .4s ease-in-out;
 }
 
-#rightTrailerContainer .more:hover{
+.more:hover{
     opacity: .8;
 }
 
@@ -427,18 +438,18 @@ body{
     color: var(--black);
 }
 
-#rightTrailerContainer .more p{
+.more p{
     display: inline-block;
     font-family: 'Share Regular';
     font-size: 2rem;
 }
 
-#rightTrailerContainer .more .iconify{
+.more .iconify{
     position: relative !important;
     transform: translateY(15%) !important;
 }
 
-#rightTrailerContainer .more img{
+.more img{
     width: 2%;
 }
 
@@ -447,7 +458,158 @@ body{
     width: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
+}
+
+/*Introduction and News*/
+#introductionNews{
+    position: relative;
+    display: flex;
+
+    padding: 2rem 0;
+}
+
+#introductionNews h1{
+    font-family: 'Share Bold';
+    font-size: 4rem;
+    margin-bottom: .25em;
+}
+
+#introductionContainer{
+    flex-basis: 68%;
+    padding: 0 5% 0 5%;
+}
+
+#introductionContainer .introductionText{
+    font-family: 'Share Regular';
+    font-size: 1.75rem;
+    margin-bottom: .5em;
+}
+
+#introductionContainer #introductionImageContainer{
+    position: relative;
+    display: flex;
+    gap: 1em;
+
+    margin-top: 1.5em;
+}
+
+#introductionImageContainer #introductionMainImage{
+    flex-basis: 70%;
+    overflow: hidden;
+}
+
+#introductionMainImage .mainImage{
+    width: 100%;
+    transition: transform .5s ease-in-out;
+
+    position: relative;
+    z-index: 1;
+}
+
+#introductionMainImage:hover .mainImage{
+    transform: scale(1.5);
+}
+
+#introductionImageContainer #introductionSubImage{
+    flex-basis: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    position: relative;
+    z-index: 1;
+}
+
+#introductionSubImage .introductionSubImage{
+    flex-basis: 50%;
+    background-size: cover;
+    background-position: center center;
+
+    cursor: pointer;
+}
+
+#introductionSubImage .introductionSubImage:hover{
+    box-shadow: inset 0px 0px 4px var(--white);
+}
+
+.introductionSubImage .subImageMask{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+
+    opacity: .8;
+}
+
+.introductionSubImage .subImageMask:hover{
+    box-shadow: inset 0px 0px 4px var(--white);
+}
+
+#introductionImageContainer .decoration2{
+    position: absolute;
+    margin-left: -10%;
+    bottom: 0;
+    left:0;
+    width: 50%;
+    z-index: 0;
+}
+
+#newsContainer{
+    flex-basis: 32%;
+}
+
+#newsContentContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsContent{
+    padding-right: 20%;
+}
+
+.newsContent img{
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+.newsContent a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.newsContent a:hover .newsDate{
+    opacity: .8;
+}
+
+.newsContent a:hover .newsTitle{
+    opacity: .8;
+}
+
+.newsContent a:hover .newsText{
+    opacity: .8;
+}
+
+.newsContent .newsDate{
+    font-family: 'Share Regular';
+    font-size: 1.5em;
+
+    transition: opacity .2s ease-in-out;
+}
+
+.newsContent .newsTitle{
+    font-family: 'Share Bold';
+    font-size: 2em;
+
+    transition: opacity .2s ease-in-out;
+}
+
+.newsContent .newsText{
+    font-family: 'Share Regular';
+    font-size: 1.5em;
+    margin-bottom: .5em;
+
+    transition: opacity .2s ease-in-out;
 }
 
 @media screen and (min-width: 1920px){
@@ -488,11 +650,11 @@ body{
         font-size: 6rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 3rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 2.75rem !important;
     }
 
@@ -540,11 +702,11 @@ body{
         font-size: 7rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 4rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 3.75rem !important;
     }
 
@@ -605,11 +767,11 @@ body{
         font-size: 10rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 5rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 4.75rem !important;
     }
 
@@ -621,7 +783,7 @@ body{
         padding-left: .5rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-left: 2rem;
     }
 }
@@ -643,11 +805,11 @@ body{
         font-size: 12rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 6rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 5.5rem !important;
     }
 
@@ -659,7 +821,7 @@ body{
         padding-left: .5rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-left: 2rem;
     }
 }
@@ -824,7 +986,7 @@ body{
         font-size: 3.75rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-left: .5rem;
     }
 
@@ -1006,16 +1168,16 @@ body{
             font-size: 3rem;
         }
 
-        #rightTrailerContainer .more{
+        .more{
             margin-top: .5rem;
             margin-left: .5rem;
         }
 
-        #rightTrailerContainer .more p{
+        .more p{
             font-size: 1.5rem;
         }
 
-        #rightTrailerContainer .more .iconify{
+        .more .iconify{
             font-size: 1.25rem !important;
         }
     }
@@ -1045,15 +1207,15 @@ body{
         font-size: 3rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 1.5rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 1.25rem !important; 
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-top: .5rem;
     }
 }
@@ -1111,16 +1273,16 @@ body{
         font-size: 2.25rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-top: .5rem;
         margin-left: .5rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 1.25rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: 1rem !important;
     }
 }
@@ -1176,11 +1338,11 @@ body{
         font-size: 2rem;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: 1rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: .75rem !important;
     }
 }
@@ -1240,16 +1402,16 @@ body{
         font-size: 2rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-left: .4rem;
         margin-top: 0;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: .75rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: .5rem !important;
     }
 }
@@ -1309,16 +1471,16 @@ body{
         font-size: 1.5rem;
     }
 
-    #rightTrailerContainer .more{
+    .more{
         margin-left: .25rem;
         margin-top: 0;
     }
 
-    #rightTrailerContainer .more p{
+    .more p{
         font-size: .75rem;
     }
 
-    #rightTrailerContainer .more .iconify{
+    .more .iconify{
         font-size: .5rem !important;
     }
 }
