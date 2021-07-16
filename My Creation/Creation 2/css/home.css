@@ -481,6 +481,9 @@ body, *{
 }
 
 #introductionContainer .introductionText{
+    position: relative;
+    z-index: 1;
+
     font-family: 'Share Regular';
     font-size: 1.75rem;
     margin-bottom: .5em;
