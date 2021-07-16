@@ -1287,6 +1287,10 @@ body, *{
             margin-top: .5rem;
         }
 
+        #rightHeaderContainer{
+            background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+        }
+
         #menu ul a li{
             font-size: 1.5em;
         }
