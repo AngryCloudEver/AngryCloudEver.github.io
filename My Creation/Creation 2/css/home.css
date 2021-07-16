@@ -1395,6 +1395,14 @@ body, *{
         #trailer{
             padding: 2rem 0 2rem 5%;
         }
+
+        #rightHeaderContainer{
+            background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+        }
+    }
+
+    #rightHeaderContainer{
+        background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
     }
 
     #filmInfoMobile #filmTitleMobile{
@@ -1536,6 +1544,10 @@ body, *{
         flex-basis: 100%;
     }
 
+    #rightHeaderContainer{
+        background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+    }
+
     #floatingMenu{
         right: 2em;
         top: 2em;
@@ -1664,6 +1676,10 @@ body, *{
         margin: 1em 0
     }
 
+    #rightHeaderContainer{
+        background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+    }
+
     #floatingMenu{
         right: 1.5em;
         top: 2em;
@@ -1755,6 +1771,10 @@ body, *{
 
     #leftHeaderContainer .line{
         margin: .5em 0;
+    }
+
+    #rightHeaderContainer{
+        background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
     }
 
     #floatingMenu{
