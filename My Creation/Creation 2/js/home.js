@@ -96,4 +96,13 @@ $(window).on('load', function(event){
         $("#floatingContainer").css('display', 'none');
         $("#floatingTrailerVideo").get(0).pause();
     });
+
+    //Change Image
+    $(".introductionSubImage").on('click', function(){
+        let newImage = $(this).attr('name');
+        $(".mainImage").attr('src', newImage);
+        $(".subImageMask").css('display', 'none');
+        $(this).children('.subImageMask').css('display', 'block');
+        
+    });
 });
