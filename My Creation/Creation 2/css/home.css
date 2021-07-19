@@ -19,6 +19,28 @@ body, *{
     background-color: var(--white);
 }
 
+/*Scroll Top Button*/
+#scrollTopButton{
+    position: fixed;
+    right: 3em;
+    bottom: 0;
+    opacity: 0;
+
+    display: block;
+    z-index: 1;
+}
+
+#scrollTopButton img{
+    width: 6rem;
+
+    transition: opacity .2s ease-in-out;
+}
+
+#scrollTopButton img:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
 /*Floating Menu*/
 #floatingMenu{
     display: none;
@@ -300,6 +322,7 @@ body, *{
 
     display: flex;
     flex-direction: column;
+    opacity: 0;
 }
 
 #topTrailerContainer #filmInfoMobile{
@@ -478,6 +501,8 @@ body, *{
 #introductionContainer{
     flex-basis: 68%;
     padding: 0 5% 0 5%;
+
+    opacity: 0;
 }
 
 #introductionContainer .introductionText{
@@ -560,6 +585,7 @@ body, *{
 
 #newsContainer{
     flex-basis: 32%;
+    opacity: 0;
 }
 
 #newsContentContainer{
@@ -616,6 +642,14 @@ body, *{
 }
 
 @media screen and (min-width: 1920px){
+    #scrollTopButton{
+        right: 5em;
+    }
+
+    #scrollTopButton img{
+        width: 8em;
+    }
+
     #leftHeaderContainer .shareText{
         font-size: 3.25em;
     }
@@ -691,6 +725,15 @@ body, *{
 }
 
 @media screen and (min-width: 2560px){
+    #scrollTopButton{
+        right: 8em;
+        bottom: 4em;
+    }
+
+    #scrollTopButton img{
+        width: 10em;
+    }
+
     #leftHeaderContainer .shareText{
         font-size: 4.5em;
     }
@@ -1242,6 +1285,10 @@ body, *{
             right: -300px;
         }
 
+        #scrollTopButton{
+            display: none;
+        }
+
         #rightHeaderContainer .filmTitle{
             font-size: 2.5em;
         }
@@ -1340,6 +1387,10 @@ body, *{
             right: -300px;
 
             background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+        }
+
+        #scrollTopButton{
+            display: none;
         }
 
         #rightHeaderContainer .decoration{

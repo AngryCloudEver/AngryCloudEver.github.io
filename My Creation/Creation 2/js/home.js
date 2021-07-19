@@ -9,6 +9,8 @@ $(window).on('load', function(event){
         location.reload(true);
     });*/
 
+    changeIntroductionImage();
+
     $(".filmTitle").animate({opacity: 1, top: 0}, 800);
     $(".filmDate").delay(50).animate({opacity: 1, top: 0}, 800);
     $("#leftHeaderContainer").children().delay(50).animate({opacity: 1, left: 0}, 800);
@@ -99,10 +101,80 @@ $(window).on('load', function(event){
 
     //Change Image
     $(".introductionSubImage").on('click', function(){
-        let newImage = $(this).attr('name');
-        $(".mainImage").attr('src', newImage);
-        $(".subImageMask").css('display', 'none');
-        $(this).children('.subImageMask').css('display', 'block');
-        
+        let mainImage = $(".mainImage").attr('src');
+        let newImage = $(this).attr('filename');
+
+        if(mainImage != newImage){
+            $(".mainImage").animate({opacity: 0, right: '100px'}, 400, function(){
+                $(".mainImage").attr('src', newImage);
+                $(".mainImage").css('right', '-100px')
+                        $(".mainImage").animate({opacity: 1, right: 0}, 400);
+            });
+            $(".subImageMask").css('display', 'none');
+            $(this).children('.subImageMask').css('display', 'block');
+        }
+    });
+
+    //Auto Change Introduction Image
+    function changeIntroductionImage(){
+        let mainImage = $(".mainImage").attr('src');
+
+        $(".introductionSubImage").each(function(index){
+            if($(this).attr('filename') == mainImage){
+                index++;
+                if(index == 2){
+                    index = 0;
+                }
+                $(".mainImage").animate({opacity: 0, right: '100px'}, 400, function(){
+                    let changeImage = $('.introductionSubImage:eq('+ index +')').attr('filename');
+                    $(".mainImage").attr('src', changeImage);
+                    $(".mainImage").css('right', '-100px')
+                    $(".mainImage").animate({opacity: 1, right: 0}, 400);
+                });
+                $(this).children('.subImageMask').css('display', 'none');
+                $('.introductionSubImage:eq('+ index +')').children('.subImageMask').css('display', 'block');
+            }
+        });
+        setTimeout(changeIntroductionImage, 8000);
+    }
+
+    let scrollButton = false;
+
+    //Scroll Check First Load
+    if($(window).scrollTop() + $(window).height() > $("#trailer").offset().top + 100){
+        $("#trailer").animate({opacity: 1}, 800);
+    }
+    if($(window).scrollTop() + $(window).height() > $("#introductionNews").offset().top + 100){
+        $("#introductionContainer").animate({opacity: 1}, 800);
+        $("#newsContainer").delay(400).animate({opacity: 1}, 800);
+    }
+
+    //Scroll Check
+    $(window).on("scroll", function(){
+        if($(window).scrollTop() + $(window).height() > $("#trailer").offset().top + 100){
+            $("#trailer").animate({opacity: 1}, 800);
+        }
+        if($(window).scrollTop() > $("#trailer").offset().top){
+            if(scrollButton == false){
+                $("#scrollTopButton").animate({opacity: 1, bottom: "2em"}, 400);
+                scrollButton = true;
+            }
+        }
+        if($(window).scrollTop() < $("#trailer").offset().top){
+            if(scrollButton == true){
+                $("#scrollTopButton").animate({opacity: 0, bottom: 0}, 400);
+                scrollButton = false;
+            }
+        }
+        if($(window).scrollTop() + $(window).height() > $("#introductionNews").offset().top + 100){
+            $("#introductionContainer").animate({opacity: 1}, 800);
+            $("#newsContainer").delay(400).animate({opacity: 1}, 800);
+        }
+    });
+
+    //Scroll Top Button Click
+    $("#scrollTopButton").on('click', function(){
+        let targetScroll = $("#container").offset().top;
+        $('html, body').animate({scrollTop: targetScroll}, 1500);
     });
 });
