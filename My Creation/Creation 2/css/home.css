@@ -16,7 +16,6 @@ body, *{
 
 #container2{
     width: 100%;
-    background-color: var(--white);
 }
 
 /*Scroll Top Button*/
@@ -33,12 +32,17 @@ body, *{
 #scrollTopButton img{
     width: 6rem;
 
-    transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out, transform .4s ease-in-out;
 }
 
 #scrollTopButton img:hover{
     cursor: pointer;
     opacity: .8;
+    transform: rotate(360deg);
+}
+
+#scrollTopButton img:active{
+    opacity: 1;
 }
 
 /*Floating Menu*/
@@ -246,7 +250,7 @@ body, *{
 }
 
 #menu ul a li:active{
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #rightHeaderContainer .downArrow{
@@ -490,6 +494,8 @@ body, *{
     display: flex;
 
     padding: 2rem 0;
+
+    background: linear-gradient(180deg, #FEFBF4 0%, #FEFBF4 83.65%, #D2E7EE 100%);
 }
 
 #introductionNews h1{
@@ -641,6 +647,83 @@ body, *{
     transition: opacity .2s ease-in-out;
 }
 
+/*Footer*/
+#footer{
+    background-color: var(--blue3);
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#footerTop{
+    padding: 2em 0 .5em 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#footerTop #decorationFooterTop{
+    background-image: url(../images/footer_line_top.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1.5em;
+}
+
+#footerTop #decorationFooterBottom{
+    background-image: url(../images/footer_line_bottom.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1.5em;
+}
+
+#footerTop #footerMenu{
+    padding: 0 10%;
+}
+
+#footerMenu ul{
+    list-style: none;
+    text-align: center;
+}
+
+#footerMenu ul li{
+    display: inline-block;
+    padding: 1em 2em 1.5em 2em;
+}
+
+#footerMenu ul li a{
+    text-decoration: none;
+    color: var(--black);
+
+    font-family: 'Share Bold';
+    font-size: 1.5em;
+
+    transition: opacity .2s ease-in-out;
+}
+
+#footerMenu ul li a:hover{
+    opacity: .85;
+}
+
+#footerMenu ul li a:active{
+    opacity: 1;
+}
+
+#footerBottom{
+    padding: 0 5% 1em 5%;
+    text-align: center;
+}
+
+.footerInfo{
+    font-family: 'Share Regular';
+    font-size: 1.5em;
+}
+
+.footerInfo:first-child{
+    margin-bottom: .5em;
+}
+
 @media screen and (min-width: 1920px){
     #scrollTopButton{
         right: 5em;
@@ -721,6 +804,22 @@ body, *{
 
     .newsContent .newsText{
         font-size: 2.5em;
+    }
+
+    .footerInfo{
+        font-size: 2em;
+    }
+
+    #footerMenu ul li{
+        padding: 1.5em 2.5em 2em 2.5em
+    }
+
+    #footerMenu ul li a{
+        font-size: 2.5em;
+    }
+
+    #footerBottom{
+        padding: 1em 5% 2em 5%;
     }
 }
 
@@ -811,6 +910,22 @@ body, *{
     .newsContent .newsText{
         font-size: 3em;
     }
+
+    .footerInfo{
+        font-size: 2.75em;
+    }
+
+    #footerMenu ul li{
+        padding: 2em 3em 2.5em 3em
+    }
+
+    #footerMenu ul li a{
+        font-size: 3.25em;
+    }
+
+    #footerBottom{
+        padding: 1em 5% 2em 5%;
+    }
 }
 
 @media screen and (min-width: 2560px){
@@ -849,6 +964,14 @@ body, *{
 }
 
 @media screen and (min-width: 3440px){
+    #scrollTopButton img{
+        width: 12em;
+    }
+
+    #scrollTopButton{
+        bottom: 4em !important;
+    }
+
     #trailer #filmAuthor{
         font-size: 7.5rem;
     }
@@ -908,6 +1031,22 @@ body, *{
 
     .newsContent .newsText{
         font-size: 4.5em;
+    }
+
+    .footerInfo{
+        font-size: 3.5em;
+    }
+
+    #footerMenu ul li{
+        padding: 3em 4em 3.5em 4em
+    }
+
+    #footerMenu ul li a{
+        font-size: 4.25em;
+    }
+
+    #footerBottom{
+        padding: 2em 5% 3em 5%;
     }
 }
 
@@ -989,6 +1128,10 @@ body, *{
 
     #introductionNews h1{
         font-size: 3.5rem;
+    }
+
+    .footerInfo{
+        font-size: 1.25em;
     }
 }
 
@@ -1073,7 +1216,23 @@ body, *{
         width: inherit;
     }
 
+    #footerMenu ul li{
+        padding: 1em 1.5em 1.5em 1.5em;
+    }
+
+    #footerMenu ul li a{
+        font-size: 1.35em;
+    }
+
+    .footerInfo{
+        font-size: 1em;
+    }
+
     @media screen and (min-height: 910px){
+        #scrollTopButton{
+            display: none;
+        }
+
         #floatingMenu{
             display: block;
         }
@@ -1083,32 +1242,42 @@ body, *{
         }
     
         #leftHeaderContainer{
-            flex-basis: 10%;
-    
-            position: relative;
-            height: inherit;
-        }
-
-        #leftHeaderContainer .shareText{
-            font-size: 3em;
-        }
-
-        #leftHeaderContainer .sideTitle{
-            font-size: 3em;
+            display: none;
+            flex-basis: inherit;
+            background
         }
     
         #middleHeaderContainer{
-            flex-basis: 90%;
+            flex-basis: 100%;
         }
     
         #rightHeaderContainer{
             display: none;
             right: -100px;
             opacity: 0; 
+            flex-basis: inherit;
+
+            background: linear-gradient(180deg, #F3F6EF 0%, #D2E7EE 18.42%);
+        }
+
+        #rightHeaderContainer .filmTitle{
+            font-size: 4em;
+        }
+
+        #rightHeaderContainer .filmDate{
+            font-size: 3em;
+        }
+
+        #menu ul a li{
+            font-size: 2.5em;
+        }
+
+        #rightHeaderContainer .downArrow{
+            display: none;
         }
 
         #trailer{
-            padding: 2rem 0 2rem 10%;
+            padding: 2rem 5% 2rem 5%;
         }
 
         #filmInfoMobile #filmTitleMobile{
@@ -1128,7 +1297,7 @@ body, *{
         }
 
         #introductionContainer{
-            padding: 0 5% 0 10%;
+            padding: 0 5% 0 5%;
         }
 
         #introductionNews{
@@ -1174,10 +1343,26 @@ body, *{
         .newsContent .newsText{
             font-size: 1.25em;
         }
+
+        #footerMenu ul li{
+            padding: 1em 1.25em 1.5em 1.25em;
+        }
+    }
+}
+
+@media screen and (max-width: 961px){
+    @media screen and (min-height: 600px){
+        #footerMenu ul li{
+            padding: 1em 1.25em 1.5em 1.25em
+        }
     }
 }
 
 @media screen and (max-width: 901px){
+    #scrollTopButton{
+        display: none;
+    }
+
     #trailer #filmAuthor{
         font-size: 2.75rem;
     }
@@ -1207,7 +1392,7 @@ body, *{
     }
 
     #introductionContainer{
-        padding: 0 5% 0 10%;
+        padding: 0 5% 0 5%;
     }
 
     #introductionNews h1{
@@ -1247,6 +1432,18 @@ body, *{
 
     .newsContent .newsText{
         font-size: 1.25em;
+    }
+
+    #footerTop #footerMenu{
+        padding: 0 5%;
+    }
+
+    #footerMenu ul li a{
+        font-size: 1.25em;
+    }
+
+    .footerInfo{
+        font-size: 1em;
     }
 
     @media screen and (max-height: 481px){
@@ -1318,6 +1515,10 @@ body, *{
             gap: 1em;
             padding-top: .5rem;
         }
+
+        #footerMenu ul li{
+            padding: 1em 1.25em 1.5em 1.25em;
+        }
     }
 
     @media screen and (max-height: 400px){
@@ -1344,6 +1545,14 @@ body, *{
 
         #rightHeaderContainer .downArrow{
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 801px){
+    @media screen and (min-height: 1280px){
+        #footerMenu ul li{
+            padding: 1em 1em 1.5em 1em;
         }
     }
 }
@@ -1378,7 +1587,7 @@ body, *{
         }
 
         #middleHeaderContainer{
-            flex-basis: 90%;
+            flex-basis: 100%;
         }
 
         #rightHeaderContainer{
@@ -1402,7 +1611,7 @@ body, *{
         }
 
         #trailer{
-            padding: 2rem 0 2rem 10%;
+            padding: 2rem 0 2rem 5%;
         }
 
         #trailer #filmAuthor{
@@ -1444,6 +1653,10 @@ body, *{
 
         .more .iconify{
             font-size: 1.25rem !important;
+        }
+
+        #footerMenu ul li{
+            padding: .75em 1em 1.25em 1em;
         }
     }
     @media screen and (max-height: 482px){
@@ -1493,6 +1706,20 @@ body, *{
     }
 
 
+}
+
+@media screen and (max-width: 741px){
+    @media screen and (min-height: 360px){
+        #footerMenu ul li{
+            padding: 1em .75em 1.5em .75em
+        }
+    }
+}
+
+@media screen and (max-width: 668px){
+    #footerMenu ul li a{
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 601px){
@@ -1587,6 +1814,21 @@ body, *{
 
     .newsContent .newsText{
         font-size: 1.25em;
+    }
+
+    #footerTop #decorationFooterTop{
+        margin-bottom: .5em;
+    }
+
+    #footerMenu ul li{
+        padding: 0 1em;
+        padding-bottom: .75em;
+    }
+}
+
+@media screen and (max-width: 569px){
+    #footerMenu ul li{
+        padding: 0 .75em .75em 0;
     }
 }
 
@@ -1708,6 +1950,24 @@ body, *{
     #newsContentContainer .more .iconify{
         font-size: 1.75rem !important;
     }
+
+    @media screen and (min-height: 853px){
+        #footerTop{
+            padding: 0 0 .5em 0;
+        }
+
+        .newsContent .newsDate{
+            font-size: 1.25em;
+        }
+
+        .newsContent .newsTitle{
+            font-size: 1.5em;
+        }
+
+        .newsContent .newsText{
+            font-size: 1.5em;
+        }
+    }
 }
 
 @media screen and (max-width: 426px){
@@ -1804,6 +2064,14 @@ body, *{
 
     #newsContentContainer .more .iconify{
         font-size: 1.25rem !important;
+    }
+
+    #footerTop{
+        padding: 0 0 .5em 0;
+    }
+
+    .footerInfo{
+        font-size: .8em;
     }
 }
 
@@ -1903,6 +2171,10 @@ body, *{
         height: 3.5em;
     }
 
+    #newsContainer{
+        padding: 2rem 5% 1rem 5%;
+    }
+
     .newsContent .newsDate{
         font-size: 1em;
     }
@@ -1917,5 +2189,16 @@ body, *{
 
     #newsContentContainer .more .iconify{
         font-size: 1.25rem !important;
+    }
+
+    #footerMenu ul li a{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 321px){
+    #footerMenu ul li{
+        padding: 0 .75em;
+        padding-bottom: .75em;
     }
 }
